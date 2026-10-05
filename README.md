@@ -19,21 +19,32 @@ Trabalho acadêmico de análise topológica de grafos e estrutura de colaboraç�
 
 ## 🚀 Como Executar o Projeto
 
-### 1. Instalar Dependências
+### ⚡ Método Rápido (Comando Único)
+Para atualizar os dados, ligar o servidor web e abrir o navegador automaticamente, execute:
+```bash
+./executar.sh
+```
+*(ou `python3 run.py`)*
+
+---
+
+### 🛠️ Método Manual (Passo a Passo)
+
+#### 1. Instalar Dependências
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Rodar a Suíte de Testes Automatizados
+#### 2. Rodar a Suíte de Testes Automatizados
 ```bash
-pytest tests/
+python3 -m pytest tests/
 ```
 
-### 3. Iniciar o Dashboard Web Interativo
+#### 3. Iniciar o Dashboard Web Interativo
 ```bash
 python3 -m http.server 8000 --directory web
 ```
-Abra o navegador em `http://localhost:8000` para explorar o grafo de forças interativo!
+Abra o navegador em `http://localhost:8000` para explorar o grafo interativo!
 
 ### 4. Executar o Coletor/Crawler MusicBrainz (Opcional)
 Para buscar qualquer novo gênero musical diretamente da API da MusicBrainz:
