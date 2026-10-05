@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Análise Topológica de Redes | Rock dos Anos 80, 90 & Cenas Correlatas</title>
+  <meta name="description" content="Dashboard interativo para análise topológica de grafos de colaboração no Rock dos Anos 80 e 90. Visualização de arestas predominantes, árvores MST e simplificação visual de nós terminais.">
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos Visuais -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Vis.js Network Library -->
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header / Navbar -->
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo-icon">📊</div>
+        <div class="brand-text">
+          <h1>Análise Topológica <span>Rock Alternativo (Anos 80 e 90)</span></h1>
+          <p>Trabalho Acadêmico de Teoria dos Grafos & Ciência das Redes Complexas</p>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="nodeSearch" placeholder="🔍 Buscar artista ou banda..." list="artistList">
+          <datalist id="artistList"></datalist>
+        </div>
+        <button id="btnResetView" class="btn btn-secondary">🔄 Resetar Visão</button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+      <!-- Left Sidebar: Controls & Parameters -->
+      <aside class="sidebar-left">
+        <div class="panel-card">
+          <h2 class="panel-title">⚙️ Parâmetros & Ramificações</h2>
+
+          <!-- Filtro de Gênero -->
+          <div class="control-group">
+            <label for="selectGenre">Gênero / Ramificação Musical:</label>
+            <select id="selectGenre" class="form-control">
+              <option value="All">🌐 Todos os Gêneros (Supergrafo 80s/90s)</option>
+              <option value="Alternative Rock">🎸 Rock Alternativo (Radiohead, Pixies, Sonic Youth)</option>
+              <option value="Grunge">🌧️ Grunge (Nirvana, Pearl Jam, Soundgarden, Alice in Chains)</option>
+              <option value="Post-Punk">🌑 Post-Punk & Goth (Joy Division, The Cure, The Smiths, Siouxsie)</option>
+              <option value="New Wave">⚡ New Wave (Depeche Mode, Talking Heads, Tears for Fears)</option>
+              <option value="Shoegaze">🌌 Shoegaze & Dream Pop (MBV, Slowdive, Ride, Mazzy Star)</option>
+              <option value="Britpop">🇬🇧 Britpop (Blur, Oasis, Pulp, Suede, Stone Roses)</option>
+              <option value="Industrial">⚙️ Industrial & Alt Metal (NIN, Ministry, Tool, Deftones)</option>
+              <option value="Hardcore Punk">⚡ Hardcore & Noise Rock (Fugazi, Minor Threat, Bad Religion, Slint)</option>
+              <option value="Indie Rock">🥑 Indie Rock 90s-00s (Pavement, Arcade Fire, Modest Mouse, GBV)</option>
+              <option value="Garage Rock Revival">⚡ Garage Rock Revival (Strokes, Interpol, YYYs, Arctic Monkeys)</option>
+              <option value="Indie Folk / Baroque">🎻 Indie Folk / Baroque (Bon Iver, Sufjan Stevens, Boygenius)</option>
+              <option value="Neo-Psychedelia">🌈 Neo-Psychedelia (Tame Impala, MGMT, Flaming Lips, King Gizzard)</option>
+            </select>
+          </div>
+
+          <!-- Poda & Backbone Algorithm -->
+          <div class="control-group">
+            <label for="selectBackbone">Espinha Dorsal (Poda / Backbone):</label>
+            <select id="selectBackbone" class="form-control">
+              <option value="full">📊 Grafo Completo</option>
+              <option value="disparity">🔬 Filtro de Disparidade (Serrano et al.)</option>
+              <option value="mst">🌲 Árvore Geradora Máxima (MST)</option>
+              <option value="bridges">🌉 Arestas-Ponte (Edge Betweenness)</option>
+            </select>
+          </div>
+
+          <!-- Simplificação de Nós Terminais (Folhas / Grau 1) -->
+          <div class="control-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="chkSimplifyTerminals" checked>
+              <span>🍃 Simplificar Nós Terminais (Folhas / Grau 1)</span>
+            </label>
+          </div>
+
+          <!-- Exibição de Rótulos de Arestas -->
+          <div class="control-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="chkShowEdgeLabels" checked>
+              <span>🏷️ Exibir Rótulo das Relações nas Arestas</span>
+            </label>
+          </div>
+
+          <!-- Ponderação Híbrida Alpha Slider -->
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="rangeAlpha">Ponderação Híbrida ($\alpha$):</label>
+              <span id="alphaValue" class="badge badge-cyan">0.50</span>
+            </div>
+            <input type="range" id="rangeAlpha" min="0.0" max="1.0" step="0.05" value="0.50">
+            <div class="slider-labels">
+              <span>0.0 (Aclamação Crítica)</span>
+              <span>1.0 (Frequência Bruta)</span>
+            </div>
+          </div>
+
+          <!-- Poda Prévia por Grau Mínimo (k-core) -->
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="rangeKmin">Poda de Grau Mínimo ($k_{\text{min}}$):</label>
+              <span id="kminValue" class="badge badge-purple">1</span>
+            </div>
+            <input type="range" id="rangeKmin" min="1" max="5" step="1" value="1">
+            <div class="slider-labels">
+              <span>1 (Nós Todos)</span>
+              <span>5 (Apenas Hubs)</span>
+            </div>
+          </div>
+
+          <!-- Coloração dos Nós -->
+          <div class="control-group">
+            <label for="selectColorBy">Colorir Nós por:</label>
+            <select id="selectColorBy" class="form-control">
+              <option value="community">🎨 Comunidades (Louvain)</option>
+              <option value="genre">🎵 Gênero / Ramificação</option>
+              <option value="type">👤 Tipo (Artista vs Banda)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Metric Summary Card -->
+        <div class="panel-card">
+          <h2 class="panel-title">📈 Estatísticas da Rede</h2>
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-label">Nós (N)</span>
+              <span id="statNodes" class="metric-value">0</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Arestas (M)</span>
+              <span id="statEdges" class="metric-value">0</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Densidade</span>
+              <span id="statDensity" class="metric-value">0.00</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Clustering (C)</span>
+              <span id="statClustering" class="metric-value">0.00</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Caminho Médio (L)</span>
+              <span id="statPathLength" class="metric-value">0.00</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-label">Modularidade (Q)</span>
+              <span id="statModularity" class="metric-value">0.00</span>
+            </div>
+          </div>
+
+          <div class="thesis-status" style="margin-top: 10px; background: rgba(88, 166, 255, 0.1); border-color: rgba(88, 166, 255, 0.2); color: var(--accent-cyan);">
+            <span>Índice de Mundo Pequeno (Watts-Strogatz S):</span>
+            <strong id="statSmallWorld">S = 0.00</strong>
+          </div>
+
+          <div class="thesis-status" id="thesisBadge">
+            <span>Tese 1 (Scale-Free Check):</span>
+            <strong id="statPowerLaw">$\gamma = 0.0$ ($R^2 = 0.0$)</strong>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Center: Network Graph Canvas -->
+      <section class="graph-section">
+        <div id="networkCanvas" class="network-canvas"></div>
+        <div class="canvas-legend">
+          <!-- Formatos dos Nós -->
+          <div class="legend-item" title="◆ Losango: Grupos e Bandas (ex: Pixies, Sonic Youth, MBV, Guided by Voices)"><span class="legend-shape shape-diamond">◆</span> Banda / Grupo</div>
+          <div class="legend-item" title="■ Quadrado: Produtores Musicais & Engenheiros de Som (ex: Steve Albini, Butch Vig, Flood, Alan Moulder)"><span class="legend-shape shape-square">■</span> Produtor Musical</div>
+          <div class="legend-item" title="● Círculo: Músicos Individuals / Artistas Solo (ex: Kim Deal, Robert Pollard, Kevin Shields)"><span class="legend-shape shape-dot">●</span> Músico / Artista</div>
+          <div class="legend-separator">|</div>
+          <!-- Cores das Arestas -->
+          <div class="legend-item" title="Linha Roxa: Vínculo de Integrante/Membro de Banda"><span class="legend-edge edge-member"></span> Integrante</div>
+          <div class="legend-item" title="Linha Laranja: Produção Técnica / Engenharia de Áudio"><span class="legend-edge edge-producer"></span> Produtor</div>
+          <div class="legend-item" title="Linha Cyan: Participação Especial / Feat / Sessão"><span class="legend-edge edge-guest"></span> Participação</div>
+          <div class="legend-item" title="Linha Verde: Co-autoria / Composição / Colaboração Direta"><span class="legend-edge edge-collab"></span> Colaboração</div>
+        </div>
+      </section>
+
+      <!-- Right Sidebar: Inspector -->
+      <aside class="sidebar-right" id="inspectorSidebar">
+        <div class="panel-card" id="inspectorContent">
+          <h2 class="panel-title">🔍 Detalhes da Relação</h2>
+          <div class="empty-inspector">
+            <div class="empty-icon">👆</div>
+            <p>Clique em um artista ou em uma aresta no grafo para ver a relação exata e o histórico de parcerias.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
