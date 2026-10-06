@@ -15,14 +15,17 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
+\IEEEoverridecommandlockouts
+
 \begin{document}
 
-\title{Análise Topológica de Redes de Colaboração no Rock Alternativo (1980--1990): Investigação de Propriedades de Mundo Pequeno, Escala Livre e Backbones de Produção}
+\title{Análise Topológica de Redes de Colaboração no Rock Alternativo (1980--1990): Investigação de Propriedades de Mundo Pequeno, Escala Livre e Backbones de Produção\thanks{O código-fonte completo, a base de dados e a aplicação web interativa estão disponíveis no repositório GitHub: \url{https://github.com/PedroHSC-0/Analise-de-redes-rock-alternativo}}}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Pedro H. S. C.}
 \IEEEauthorblockA{\textit{Departamento de Computação e Engenharia} \\
 \textit{CEFET-MG -- Campus V}\\
-Divinópolis, MG, Brasil}
+Divinópolis, MG, Brasil \\
+GitHub: \url{https://github.com/PedroHSC-0/Analise-de-redes-rock-alternativo}}
 \and
 \IEEEauthorblockN{2\textsuperscript{nd} Prof. Michel Pires da Silva}
 \IEEEauthorblockA{\textit{Orientador - Dept. de Computação} \\
@@ -199,7 +202,7 @@ O detalhamento das sete etapas do pipeline é o seguinte:
     \item \textbf{Ponderação Híbrida de Arestas}: Atribuição de pesos $w_{ij}$ aplicando a equação parametrizada por $\alpha$;
     \item \textbf{Teste de Conectividade e Filtro LCC}: Verificação de conexidade global. Caso o grafo contenha componentes desconexas (resposta ``Não''), extrai-se o Maior Componente Conexo ($N_{\text{LCC}}=763$, $M_{\text{LCC}}=848$), isolando pequenas componentes desconexas periféricas ($14,2\%$ do total de nós);
     \item \textbf{Cálculo de Algoritmos Topológicos}: Execução paralela da análise estatística (Watts-Strogatz $S$, Lei de Potência $\gamma$, Louvain $Q$, Serrano e Betweenness $C_B$);
-    \item \textbf{Exportação e Dashboard Web}: Empacotamento dos resultados em arquivo estruturado (\texttt{graph\_bundle.json}) e disponibilização no dashboard interativo em Canvas 2D.
+    \item \textbf{Exportação e Dashboard Web}: Empacotamento dos resultados em arquivo estruturado (\texttt{graph\_bundle.json}) e disponibilização no dashboard interativo em Canvas 2D, com código-fonte, scripts e suíte de testes disponibilizados publicamente \cite{pedro2026repo}.
 \end{enumerate}
 
 \section{Resultados e Discussão}
@@ -283,7 +286,7 @@ Para testar estatisticamente a relevância desses vértices, realizou-se um expe
 \subsection{O Paradoxo DIY: Da Anarquia Aparente à Coesão Estrutural}
 A caracterização empírica das métricas topológicas responde à indagação histórica e sociológica sobre a verdadeira natureza da cena alternativa. O movimento \textit{Do-It-Yourself} (DIY), nascido como reação ao controle estrito e verticalizado exercido pelas grandes gravadoras (\textit{major labels}), frequentemente afirmava-se através de um discurso de autonomia radical, descentralização e recusa a padrões corporativos.
 
-Contudo, os dados comprovam que o rompimento com a estrutura corporativa tradicional \textbf{não resultou em um ambiente caótico, anárquico ou desconexo}. A preservação de um Índice de Mundo Pequeno elevadíssimo ($S = 6,60$) e a organização em Escala Livre ($\gamma = 1,409$) revelam que o ecossistema alternativo desenvolveu uma arquitetura \textbf{auto-organizada highly eficiente}.
+Contudo, os dados comprovam que o rompimento com a estrutura corporativa tradicional \textbf{não resultou em um ambiente caótico, anárquico ou desconexo}. A preservação de um Índice de Mundo Pequeno elevadíssimo ($S = 6,60$) e a organização em Escala Livre ($\gamma = 1,409$) revelam que o ecossistema alternativo desenvolveu uma arquitetura \textbf{auto-organizada altamente eficiente}.
 
 Na ausência do planejamento executivo das grandes gravadoras, o movimento DIY substituiu a centralização financeira por uma rede descentralizada de intermediação técnica baseada em estúdios de gravação independentes (\textit{Smart Studios, Electrical Audio, Tarbox Road Studios}). Os produtores musicais, ao gravarem múltiplos discos para bandas de origens distintas, atuaram como articuladores neutros que transmitiam inovações estéticas sem impor rigidez comercial. Portanto, a Ciência das Redes demonstra que o DIY não destruiu a coesão da música popular; antes, substituiu o controle corporativo por uma teia sociotécnica orgânica e resiliente.
 
@@ -304,22 +307,20 @@ A variação sistemática do parâmetro híbrido $\alpha \in [0, 1]$ na função
 A aplicação do Algoritmo de Louvain revelou uma forte estrutura comunitária, com índice de Modularidade $Q = 0,9003$. Essa pontuação elevada indica que a rede é claramente subdividida em aglomerados coesos que correspondem com alta precisão a cenas regionais e movimentos estéticos históricos:
 \begin{enumerate}
     \item \textbf{Módulo Seattle / Grunge}: Agrupamento contendo \textit{Nirvana, Pearl Jam, Soundgarden, Alice in Chains} e o produtor Butch Vig;
-    \item \textbf{Módulo Britpop / UK Independent}: Agrupamento englobando \textit{Oasis, Blur, Pulp, Stone Roses} e o selo Creation Records (Alan McGee);
-    \item \textbf{Módulo Shoegaze / Dream Pop}: Agrupamento formado por \textit{My Bloody Valentine, Slowdive, Ride} e o produtor Alan Moulder;
-    \item \textbf{Módulo Coletivo Elephant 6 / Indie Pop}: Agrupamento unindo \textit{Neutral Milk Hotel, The Apples in Stereo, The Olivia Tremor Control} e Robert Schneider;
-    \item \textbf{Módulo Proto-Punk / No Wave NYC}: Agrupamento articulado por \textit{Talking Heads, Velvet Underground, Patti Smith}, John Cale e Brian Eno.
+    \item \textbf{Módulo UK Britpop / Madchester}: Agrupamento contendo \textit{Oasis, Blur, Pulp, The Stone Roses} e o produtor Alan McGee;
+    \item \textbf{Módulo Shoegaze / Dream Pop}: Agrupamento contendo \textit{My Bloody Valentine, Slowdive, Cocteau Twins} e o engenheiro/produtor Alan Moulder;
+    \item \textbf{Módulo Elephant 6 / Indie Pop}: Agrupamento contendo \textit{Neutral Milk Hotel, The Apples in Stereo, The Olivia Tremor Control} e o produtor Robert Schneider;
+    \item \textbf{Módulo NYC Proto-Punk / No Wave}: Agrupamento contendo \textit{Sonic Youth, Velvet Underground, Television} e o produtor John Cale.
 \end{enumerate}
-
-A alta modularidade $Q = 0,9003$ comprova que a cena do Rock Alternativo organizou-se em feudos estéticos bem definidos, cuja comunicação e intercâmbio de influências dependiam estritamente do \textit{backbone} de produtores de intermediação.
 
 \section{Conclusão e Próximas Etapas}
 
 Este trabalho apresentou uma investigação científica abrangente sobre a estrutura e a dinâmica da rede de colaborações do Rock Alternativo das décadas de 1980 e 1990, empregando conceitos avançados da Teoria dos Grafos e da Ciência das Redes Complexas.
 
 \subsection{Síntese dos Achados e Resposta à Questão Central}
-Respondendo à questão historiográfica e sociológica fundamental sobre a natureza do movimento DIY, os resultados computacionais comprovaram categoricamente que, longe de constituir um sistema caótico, anárquico ou desorganizado, o ecossistema alternativo desenvolveu uma arquitetura **auto-organizada altamente coesa**. A verificação empírica de um elevado Índice de Mundo Pequeno ($S = 6,60$ no grafo global e $S = 12,45$ no LCC) e de uma distribuição de graus em Lei de Potência ($\gamma = 1,409, R^2 = 0,7944$) valida que a cena combinou forte aglomeração local com caminhos mínimos curtos.
+Respondendo à questão historiográfica e sociológica fundamental sobre a natureza do movimento DIY, os resultados computacionais comprovaram categoricamente que, longe de constituir um sistema caótico, anárquico ou desorganizado, o ecossistema alternativo desenvolveu uma arquitetura \textbf{auto-organizada altamente coesa}. A verificação empírica de um elevado Índice de Mundo Pequeno ($S = 6,60$ no grafo global e $S = 12,45$ no LCC) e de uma distribuição de graus em Lei de Potência ($\gamma = 1,409, R^2 = 0,7944$) valida que a cena combinou forte aglomeração local com caminhos mínimos curtos.
 
-Demonstrou-se empiricamente que a coesão do movimento foi sustentada por uma rede articuladora de produtores musicais e engenheiros de som (tais como Brian Eno, Dave Fridmann, John Cale, Alan McGee, Steve Albini e Butch Vig). Ao atuarem como \textit{hubs} de elevada intermediação ($C_B$), esses profissionais serviram como pontes de transmissão técnica e estática entre subgêneros sonoramente heterogêneos, **substituindo com sucesso o antigo controle corporativo centralizador das grandes gravadoras (\textit{major labels})**.
+Demonstrou-se empiricamente que a coesão do movimento foi sustentada por uma rede articuladora de produtores musicais e engenheiros de som (tais como Brian Eno, Dave Fridmann, John Cale, Alan McGee, Steve Albini e Butch Vig). Ao atuarem como \textit{hubs} de elevada intermediação ($C_B$), esses profissionais serviram como pontes de transmissão técnica e estética entre subgêneros sonoramente heterogêneos, \textbf{substituindo com sucesso o antigo controle corporativo centralizador das grandes gravadoras (\textit{major labels})}.
 
 \subsection{Contribuições Científicas e Aplicações Práticas}
 As contribuições deste estudo, conduzido no CEFET-MG (Campus V -- Divinópolis) sob a orientação do Prof. Michel Pires da Silva, estendem-se por duas vertentes principais:
@@ -337,14 +338,15 @@ Como desdobramentos desta pesquisa, propõem-se três frentes de investigação:
 \end{enumerate}
 
 \begin{thebibliography}{00}
-\bibitem{watts1998} D. J. Watts and S. H. Strogatz, ``Collective dynamics of 'small-world' networks,'' \textit{Nature}, vol. 393, pp. 440--442, 1998.
-\bibitem{barabasi1999} A.-L. Barabási and R. Albert, ``Emergence of scaling in random networks,'' \textit{Science}, vol. 286, pp. 509--512, 1999.
-\bibitem{serrano2009} M. A. Serrano, M. Boguñá, and A. Vespignani, ``Extracting the multiscale backbone of complex weighted networks,'' \textit{PNAS}, vol. 106, pp. 6483--6488, 2009.
-\bibitem{blondel2008} V. D. Blondel et al., ``Fast unfolding of communities in large networks,'' \textit{J. Stat. Mech.}, p. P10008, 2008.
-\bibitem{newman2001} M. E. J. Newman, ``The structure of scientific collaboration networks,'' \textit{PNAS}, vol. 98, pp. 404--409, 2001.
-\bibitem{gleiser2003} P. M. Gleiser and L. Danon, ``Community structure in jazz,'' \textit{Adv. Complex Syst.}, vol. 6, pp. 565--573, 2003.
-\bibitem{park2007} J. Park, J. McDermott, and M. Mace, ``Complex networks in music collaboration,'' \textit{Phys. Rev. E}, vol. 76, p. 056114, 2007.
-\bibitem{girvan2002} M. Girvan and M. E. J. Newman, ``Community structure in social and biological networks,'' \textit{PNAS}, vol. 99, pp. 7821--7826, 2002.
+\bibitem{watts1998} D. J. Watts and S. H. Strogatz, ``Collective dynamics of 'small-world' networks,'' \textit{Nature}, vol. 393, no. 6684, pp. 440--442, 1998.
+\bibitem{barabasi1999} A.-L. Barabási and R. Albert, ``Emergence of scaling in random networks,'' \textit{Science}, vol. 286, no. 5439, pp. 509--512, 1999.
+\bibitem{serrano2009} M. A. Serrano, M. Boguñá, and A. Vespignani, ``Extracting the multiscale backbone of complex weighted networks,'' \textit{PNAS}, vol. 106, no. 16, pp. 6483--6488, 2009.
+\bibitem{blondel2008} V. D. Blondel, J.-L. Guillaume, R. Lambiotte, and E. Lefebvre, ``Fast unfolding of communities in large networks,'' \textit{J. Stat. Mech.}, vol. 2008, no. 10, p. P10008, 2008.
+\bibitem{newman2001} M. E. J. Newman, ``The structure of scientific collaboration networks,'' \textit{PNAS}, vol. 98, no. 2, pp. 404--409, 2001.
+\bibitem{gleiser2003} P. M. Gleiser and L. Danon, ``Community structure in jazz,'' \textit{Adv. Complex Syst.}, vol. 6, no. 04, pp. 565--573, 2003.
+\bibitem{park2007} J. Park, J. McDermott, and M. Mace, ``Complex networks in music collaboration,'' \textit{Phys. Rev. E}, vol. 76, no. 5, p. 056114, 2007.
+\bibitem{girvan2002} M. Girvan and M. E. J. Newman, ``Community structure in social and biological networks,'' \textit{PNAS}, vol. 99, no. 12, pp. 7821--7826, 2002.
+\bibitem{pedro2026repo} P. H. S. C. e M. P. da Silva, ``Repositório de Código-Fonte e Dados: Análise Topológica de Redes de Colaboração no Rock Alternativo (1980--1990),'' GitHub, 2026. [Online]. Disponível: \url{https://github.com/PedroHSC-0/Analise-de-redes-rock-alternativo}. Acesso em: 05 out. 2026.
 \end{thebibliography}
 
 \end{document}
