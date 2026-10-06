@@ -131,6 +131,21 @@ body {
   background: rgba(255, 255, 255, 0.15);
 }
 
+.btn-github {
+  background: #21262d;
+  color: #f0f6fc;
+  border: 1px solid rgba(240, 246, 252, 0.2);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-github:hover {
+  background: #30363d;
+  border-color: #8b949e;
+  color: #ffffff;
+}
+
 /* Main Layout */
 .app-main {
   display: flex;

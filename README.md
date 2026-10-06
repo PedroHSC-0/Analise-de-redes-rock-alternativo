@@ -1,6 +1,9 @@
 # Análise Topológica de Redes no Rock Alternativo
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-PedroHSC--0%2FAnalise--de--redes--rock--alternativo-blue?logo=github)](https://github.com/PedroHSC-0/Analise-de-redes-rock-alternativo)
+
 Trabalho acadêmico de análise topológica de grafos e estrutura de colaborações musicais no **Rock Alternativo** e gêneros correlatos (**Grunge, Post-Punk, Shoegaze, Britpop, Industrial/Experimental**).
+**Repositório Oficial**: [https://github.com/PedroHSC-0/Analise-de-redes-rock-alternativo](https://github.com/PedroHSC-0/Analise-de-redes-rock-alternativo)
 
 ![Dashboard Preview](web/index.html)
 
