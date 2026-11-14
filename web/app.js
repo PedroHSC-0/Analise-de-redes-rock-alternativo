@@ -4,6 +4,8 @@
 
 let network = null;
 let rawBundleData = null;
+let currentNodesDataset = null;
+let currentEdgesDataset = null;
 
 const COMMUNITY_COLORS = [
   '#58a6ff', '#bc8cff', '#3fb950', '#d29922', '#f85149',
@@ -49,6 +51,7 @@ async function initApp() {
     rawBundleData = await res.json();
 
     setupEventListeners();
+    setupExportFeatures();
     populateSearchAutofill();
     renderGraph();
     updateMetricsUI();
@@ -357,3 +360,461 @@ function showNodeInspector(nodeId) {
     </div>
   `;
 }
+
+/* ==========================================================================
+   MÓDULO DE EXPORTAÇÃO / PRINT DO GRAFO EM ALTA RESOLUÇÃO (4K)
+   Suporte a Fundo Branco (Artigo/LaTeX) e Fundo Preto (Tema Escuro)
+   ========================================================================== */
+
+function setupExportFeatures() {
+  // Botões de captura rápida na barra do canvas
+  const btnWhite = document.getElementById('btnQuickExportWhite');
+  if (btnWhite) {
+    btnWhite.addEventListener('click', () => {
+      exportGraphSnapshot({
+        theme: 'white',
+        scope: 'full',
+        resolution: '3840x2160',
+        includeLegend: true,
+        showLabels: true
+      });
+    });
+  }
+
+  const btnBlack = document.getElementById('btnQuickExportBlack');
+  if (btnBlack) {
+    btnBlack.addEventListener('click', () => {
+      exportGraphSnapshot({
+        theme: 'black',
+        scope: 'full',
+        resolution: '3840x2160',
+        includeLegend: true,
+        showLabels: true
+      });
+    });
+  }
+
+  // Abertura do Modal de Exportação
+  const btnHeader = document.getElementById('btnHeaderExport');
+  if (btnHeader) btnHeader.addEventListener('click', openExportModal);
+
+  const btnOptions = document.getElementById('btnQuickExportOptions');
+  if (btnOptions) btnOptions.addEventListener('click', openExportModal);
+
+  // Fechamento do Modal
+  const btnClose = document.getElementById('btnCloseModal');
+  if (btnClose) btnClose.addEventListener('click', closeExportModal);
+
+  const btnCancel = document.getElementById('btnCancelModal');
+  if (btnCancel) btnCancel.addEventListener('click', closeExportModal);
+
+  const modal = document.getElementById('exportModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target.id === 'exportModal') closeExportModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeExportModal();
+  });
+
+  // Seletor visual de temas dentro do modal (Cards Branco vs Preto)
+  const themeOptWhite = document.getElementById('themeOptWhite');
+  const themeOptBlack = document.getElementById('themeOptBlack');
+  if (themeOptWhite && themeOptBlack) {
+    themeOptWhite.addEventListener('click', () => {
+      themeOptWhite.classList.add('selected');
+      themeOptBlack.classList.remove('selected');
+      themeOptWhite.querySelector('input').checked = true;
+    });
+
+    themeOptBlack.addEventListener('click', () => {
+      themeOptBlack.classList.add('selected');
+      themeOptWhite.classList.remove('selected');
+      themeOptBlack.querySelector('input').checked = true;
+    });
+  }
+
+  // Botão de download do modal
+  const btnConfirm = document.getElementById('btnConfirmExport');
+  if (btnConfirm) {
+    btnConfirm.addEventListener('click', () => {
+      const selectedTheme = document.querySelector('input[name="exportTheme"]:checked')?.value || 'white';
+      const scope = document.getElementById('exportScope')?.value || 'full';
+      const resolution = document.getElementById('exportResolution')?.value || '3840x2160';
+      const includeLegend = document.getElementById('chkExportLegend')?.checked ?? true;
+      const showLabels = document.getElementById('chkExportLabels')?.checked ?? true;
+
+      closeExportModal();
+
+      exportGraphSnapshot({
+        theme: selectedTheme,
+        scope: scope,
+        resolution: resolution,
+        includeLegend: includeLegend,
+        showLabels: showLabels
+      });
+    });
+  }
+}
+
+function openExportModal() {
+  const modal = document.getElementById('exportModal');
+  if (modal) modal.style.display = 'flex';
+}
+
+function closeExportModal() {
+  const modal = document.getElementById('exportModal');
+  if (modal) modal.style.display = 'none';
+}
+
+/**
+ * Função Principal de Exportação do Grafo em Alta Resolução
+ */
+function exportGraphSnapshot(opts) {
+  const theme = opts.theme || 'white';
+  const scope = opts.scope || 'full';
+  const resolutionStr = opts.resolution || '3840x2160';
+  const includeLegend = opts.includeLegend !== undefined ? opts.includeLegend : true;
+  const showLabels = opts.showLabels !== undefined ? opts.showLabels : true;
+
+  const [targetWidth, targetHeight] = resolutionStr.split('x').map(Number);
+  const isWhite = theme === 'white';
+
+  showExportToast('⏳ Gerando print em alta definição (4K)... Aguarde um instante.', true);
+
+  // Se o escopo for viewport (print da tela atual exata)
+  if (scope === 'viewport') {
+    exportCurrentViewport(isWhite, includeLegend);
+    return;
+  }
+
+  // Para 'full' ou 'lcc', geramos via offscreen Vis.js para máxima nitidez (4K/8K)
+  // Obter dados filtrados ativos
+  const { nodes, edges } = filterData();
+  const colorBy = document.getElementById('selectColorBy')?.value || 'genre';
+  const simplifyTerminals = document.getElementById('chkSimplifyTerminals')?.checked ?? false;
+  const showEdgeLabels = document.getElementById('chkShowEdgeLabels')?.checked ?? false;
+
+  // Grau local para escalonamento
+  const localDegMap = {};
+  edges.forEach(e => {
+    localDegMap[e.source] = (localDegMap[e.source] || 0) + 1;
+    localDegMap[e.target] = (localDegMap[e.target] || 0) + 1;
+  });
+
+  // Filtrar nós se for foco no LCC
+  let targetNodes = nodes;
+  let targetEdges = edges;
+  if (scope === 'lcc') {
+    // Nós conectados (grau >= 1 no filtro ativo)
+    const activeIds = new Set(nodes.filter(n => (localDegMap[n.id] || 0) >= 1).map(n => n.id));
+    targetNodes = nodes.filter(n => activeIds.has(n.id));
+    targetEdges = edges.filter(e => activeIds.has(e.source) && activeIds.has(e.target));
+  }
+
+  // Coordenadas calculadas da simulação ativa no canvas principal
+  const currentPositions = network ? network.getPositions() : {};
+
+  // Fator de escala baseado na resolução (ex: 3840 = 2x escala de 1920)
+  const scaleMultiplier = Math.max(1.0, targetWidth / 1920.0);
+
+  // Preparar os nós estilizados para o tema escolhido
+  const exportVisNodes = targetNodes.map(n => {
+    let color = '#58a6ff';
+    if (colorBy === 'community') {
+      color = COMMUNITY_COLORS[n.community % COMMUNITY_COLORS.length];
+    } else if (colorBy === 'genre') {
+      color = GENRE_COLORS[n.genre] || '#8b949e';
+    } else if (colorBy === 'type') {
+      color = n.type === 'band' ? '#bc8cff' : (n.type_role === 'producer' ? '#d29922' : '#58a6ff');
+    }
+
+    const localDegree = localDegMap[n.id] || n.degree || 0;
+    const isTerminal = localDegree <= 1;
+
+    // Tamanho proporcional do nó
+    const baseSize = (simplifyTerminals && isTerminal)
+      ? 7
+      : Math.max(14, Math.min(42, 14 + localDegree * 2.2));
+    const finalSize = Math.round(baseSize * scaleMultiplier);
+
+    // Rótulo
+    let labelText = n.label;
+    if (!showLabels) {
+      labelText = '';
+    } else if (simplifyTerminals && isTerminal) {
+      labelText = '';
+    }
+
+    // Posição fixa preservando o layout da simulação
+    const pos = currentPositions[n.id] || { x: (Math.random() - 0.5) * 2000, y: (Math.random() - 0.5) * 2000 };
+
+    return {
+      id: n.id,
+      label: labelText,
+      shape: n.type === 'band' ? 'diamond' : (n.type_role === 'producer' ? 'square' : 'dot'),
+      size: finalSize,
+      x: pos.x,
+      y: pos.y,
+      fixed: true,
+      color: {
+        background: color,
+        border: isWhite ? '#1e293b' : '#ffffff',
+        highlight: { background: '#ffffff', border: color }
+      },
+      borderWidth: Math.max(1.5, Math.round(1.8 * scaleMultiplier)),
+      font: {
+        color: isWhite ? '#0f172a' : '#f8fafc',
+        face: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+        size: Math.round(13 * scaleMultiplier),
+        strokeWidth: Math.round(3.5 * scaleMultiplier),
+        strokeColor: isWhite ? '#ffffff' : '#090d16',
+        vadjust: Math.round(2 * scaleMultiplier)
+      },
+      opacity: (simplifyTerminals && isTerminal) ? 0.75 : 1.0
+    };
+  });
+
+  // Preparar as arestas estilizadas para o tema escolhido
+  const exportVisEdges = targetEdges.map(e => {
+    const edgeColor = EDGE_COLORS[e.relation_type] || '#58a6ff';
+    return {
+      id: `export_edge_${e.source}_${e.target}`,
+      from: e.source,
+      to: e.target,
+      label: showEdgeLabels ? (e.relation_label || e.relation_type) : '',
+      font: {
+        color: isWhite ? '#1e293b' : edgeColor,
+        face: 'Inter, sans-serif',
+        size: Math.round(10 * scaleMultiplier),
+        strokeWidth: Math.round(2.5 * scaleMultiplier),
+        strokeColor: isWhite ? '#ffffff' : '#090d16',
+        align: 'horizontal'
+      },
+      width: Math.max(1.8 * scaleMultiplier, Math.min(7 * scaleMultiplier, (e.weight || 0.5) * 3.8 * scaleMultiplier)),
+      color: {
+        color: edgeColor,
+        opacity: isWhite ? 0.75 : 0.65
+      },
+      smooth: { type: 'continuous' }
+    };
+  });
+
+  // Criar container invisível para renderização off-screen
+  const tempContainer = document.createElement('div');
+  tempContainer.id = 'tempOffscreenNetwork';
+  tempContainer.style.position = 'fixed';
+  tempContainer.style.left = '-35000px';
+  tempContainer.style.top = '-35000px';
+  tempContainer.style.width = `${targetWidth}px`;
+  tempContainer.style.height = `${targetHeight}px`;
+  tempContainer.style.zIndex = '-9999';
+  document.body.appendChild(tempContainer);
+
+  const exportData = {
+    nodes: new vis.DataSet(exportVisNodes),
+    edges: new vis.DataSet(exportVisEdges)
+  };
+
+  const exportOptions = {
+    physics: { enabled: false }, // Layout estático baseado nas posições calculadas
+    interaction: { dragNodes: false, dragView: false, zoomView: false }
+  };
+
+  const tempNetwork = new vis.Network(tempContainer, exportData, exportOptions);
+
+  // Enquadrar perfeitamente todos os nós, garantindo que as extremidades não sejam cortadas
+  tempNetwork.fit({ animation: false });
+
+  // Aguarda rasterização gráfica do canvas
+  setTimeout(() => {
+    try {
+      const rawCanvas = tempContainer.querySelector('canvas');
+      if (!rawCanvas) throw new Error("Canvas de renderização não encontrado");
+
+      // Canvas final com fundo sólido e legenda
+      const finalCanvas = document.createElement('canvas');
+      finalCanvas.width = targetWidth;
+      finalCanvas.height = targetHeight;
+      const ctx = finalCanvas.getContext('2d');
+
+      // 1. Pinta o fundo escolhido
+      ctx.fillStyle = isWhite ? '#ffffff' : '#090d16';
+      ctx.fillRect(0, 0, targetWidth, targetHeight);
+
+      // 2. Desenha o grafo em alta definição
+      ctx.drawImage(rawCanvas, 0, 0, targetWidth, targetHeight);
+
+      // 3. Rodapé acadêmico / legenda se solicitado
+      if (includeLegend) {
+        drawAcademicLegend(ctx, targetWidth, targetHeight, theme);
+      }
+
+      // 4. Download do arquivo PNG
+      const themeLabel = isWhite ? 'fundo_branco' : 'fundo_preto';
+      const scopeLabel = scope === 'full' ? 'completo' : scope;
+      const filename = `grafo_${scopeLabel}_rock_alternativo_${themeLabel}_${targetWidth}x${targetHeight}.png`;
+
+      const dataUrl = finalCanvas.toDataURL('image/png');
+      triggerDownload(dataUrl, filename);
+
+      showExportToast(`✅ Print ${isWhite ? 'Fundo Branco' : 'Fundo Preto'} (${targetWidth}x${targetHeight}) baixado com sucesso!`, false);
+    } catch (err) {
+      console.error("Erro ao gerar print do grafo:", err);
+      showExportToast('❌ Erro ao exportar o grafo. Tente novamente.', false);
+    } finally {
+      tempNetwork.destroy();
+      tempContainer.remove();
+    }
+  }, 220);
+}
+
+/**
+ * Captura direta da visão atual (viewport)
+ */
+function exportCurrentViewport(isWhite, includeLegend) {
+  const screenCanvas = document.querySelector('#networkCanvas canvas');
+  if (!screenCanvas) {
+    showExportToast('❌ Canvas da rede não disponível.', false);
+    return;
+  }
+
+  const width = screenCanvas.width;
+  const height = screenCanvas.height;
+
+  // Se fundo branco na visão atual, ajustamos temporariamente o dataset para contraste
+  if (isWhite && currentNodesDataset) {
+    const originalNodes = currentNodesDataset.get();
+    const whiteUpdates = originalNodes.map(n => ({
+      id: n.id,
+      font: { color: '#0f172a', strokeColor: '#ffffff', strokeWidth: 3 },
+      color: { ...n.color, border: '#1e293b' }
+    }));
+
+    currentNodesDataset.update(whiteUpdates);
+    network.redraw();
+
+    setTimeout(() => {
+      saveViewportCanvas(screenCanvas, width, height, true, includeLegend);
+      // Restaura nós
+      currentNodesDataset.update(originalNodes);
+      network.redraw();
+    }, 100);
+  } else {
+    saveViewportCanvas(screenCanvas, width, height, false, includeLegend);
+  }
+}
+
+function saveViewportCanvas(screenCanvas, width, height, isWhite, includeLegend) {
+  const finalCanvas = document.createElement('canvas');
+  finalCanvas.width = width;
+  finalCanvas.height = height;
+  const ctx = finalCanvas.getContext('2d');
+
+  ctx.fillStyle = isWhite ? '#ffffff' : '#090d16';
+  ctx.fillRect(0, 0, width, height);
+  ctx.drawImage(screenCanvas, 0, 0);
+
+  if (includeLegend) {
+    drawAcademicLegend(ctx, width, height, isWhite ? 'white' : 'black');
+  }
+
+  const filename = `grafo_visao_atual_rock_alternativo_${isWhite ? 'fundo_branco' : 'fundo_preto'}.png`;
+  const dataUrl = finalCanvas.toDataURL('image/png');
+  triggerDownload(dataUrl, filename);
+
+  showExportToast(`✅ Print da visão atual (${isWhite ? 'Fundo Branco' : 'Fundo Preto'}) baixado com sucesso!`, false);
+}
+
+/**
+ * Desenha Banner de Legenda Científica e Métricas Topológicas no Rodapé
+ */
+function drawAcademicLegend(ctx, width, height, theme) {
+  const isWhite = theme === 'white';
+  const bannerHeight = Math.max(72, Math.round(height * 0.058));
+  const y = height - bannerHeight;
+
+  ctx.save();
+
+  // Fundo com leve transparência e blur estético
+  ctx.fillStyle = isWhite ? 'rgba(248, 250, 252, 0.96)' : 'rgba(13, 17, 23, 0.94)';
+  ctx.fillRect(0, y, width, bannerHeight);
+
+  // Linha superior divisória
+  ctx.strokeStyle = isWhite ? '#cbd5e1' : 'rgba(88, 166, 255, 0.25)';
+  ctx.lineWidth = Math.max(1, Math.round(width * 0.0007));
+  ctx.beginPath();
+  ctx.moveTo(0, y);
+  ctx.lineTo(width, y);
+  ctx.stroke();
+
+  // Cores de texto
+  const primaryText = isWhite ? '#0f172a' : '#f0f6fc';
+  const secondaryText = isWhite ? '#475569' : '#8b949e';
+  const accentColor = isWhite ? '#0284c7' : '#58a6ff';
+
+  const titleFontSize = Math.max(13, Math.round(width * 0.0068));
+  const subFontSize = Math.max(10, Math.round(width * 0.0052));
+
+  // Título à esquerda
+  ctx.textAlign = 'left';
+  ctx.textBaseline = 'top';
+  ctx.font = `bold ${titleFontSize}px 'Outfit', Inter, sans-serif`;
+  ctx.fillStyle = primaryText;
+  ctx.fillText('Supergrafo de Colaborações — Rock dos Anos 80 e 90 & Cenas Correlatas', 28, y + bannerHeight * 0.2);
+
+  // Métricas científicas no subtítulo
+  ctx.font = `${subFontSize}px 'Inter', sans-serif`;
+  ctx.fillStyle = secondaryText;
+
+  let metricsStr = 'Teoria dos Grafos & Ciência das Redes Complexas';
+  if (rawBundleData && rawBundleData.global_metrics) {
+    const gm = rawBundleData.global_metrics;
+    metricsStr = `N = ${gm.num_nodes} nós | M = ${gm.num_edges} colaborações | LCC = ${gm.num_lcc_nodes} nós (${((gm.num_lcc_nodes / gm.num_nodes) * 100).toFixed(1)}%) | Densidade = ${gm.density} | Modularidade Q = ${gm.modularity}`;
+  }
+  ctx.fillText(metricsStr, 28, y + bannerHeight * 0.58);
+
+  // Legenda de formas e arestas à direita
+  ctx.textAlign = 'right';
+  ctx.font = `600 ${subFontSize}px 'Inter', sans-serif`;
+  ctx.fillStyle = primaryText;
+  const legendRight = width - 28;
+  ctx.fillText('◆ Banda / Grupo    ■ Produtor Musical    ● Artista Solo    |    — Integrante   — Produção   — Colaboração', legendRight, y + bannerHeight * 0.38);
+
+  ctx.restore();
+}
+
+/**
+ * Disparo automático de download no navegador
+ */
+function triggerDownload(dataUrl, filename) {
+  const link = document.createElement('a');
+  link.href = dataUrl;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+/**
+ * Exibe notificação toast na tela
+ */
+function showExportToast(msg, isProcessing) {
+  const toast = document.getElementById('exportToast');
+  const icon = document.getElementById('exportToastIcon');
+  const text = document.getElementById('exportToastMsg');
+  if (!toast) return;
+
+  icon.textContent = isProcessing ? '⏳' : (msg.includes('❌') ? '❌' : '✅');
+  text.textContent = msg;
+  toast.style.display = 'flex';
+
+  if (!isProcessing) {
+    setTimeout(() => {
+      toast.style.display = 'none';
+    }, 4500);
+  }
+}
+

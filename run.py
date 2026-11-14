@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Launcher automático do Projeto de Análise de Redes - Rock Alternativo (CEFET-MG Divinópolis).
+Launcher automático do Projeto de Análise de Redes - Rock Alternativo (UFCI-MG Campus Divinópolis).
 Este script:
  1. Atualiza e exporta o bundle de dados JSON.
  2. Inicia o servidor HTTP local na porta 8000.
@@ -20,7 +20,7 @@ def check_port_in_use(port=8000):
 
 def main():
     print("=" * 70)
-    print("🎸  CEFET-MG Campus V (Divinópolis) - Análise de Redes de Rock Alternativo")
+    print("🎸  UFCI-MG Campus Divinópolis - Análise de Redes de Rock Alternativo")
     print("    Alunos: Pedro H. S. C. | Orientador: Prof. Michel Pires da Silva")
     print("=" * 70)
 

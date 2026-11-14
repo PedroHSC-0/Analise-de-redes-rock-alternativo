@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "total_nodes": 889,
-    "total_edges": 954,
+    "total_nodes": 864,
+    "total_edges": 939,
     "version": "2.0.0-validated"
   },
   "nodes": [
@@ -88,7 +88,8 @@
       "genre": "Post-Punk",
       "type_role": "artist",
       "country": "UK",
-      "formed_year": 1982
+      "formed_year": 1982,
+      "subgenre": "Post-Punk"
     },
     {
       "id": "Morrissey",
@@ -230,10 +231,11 @@
       "id": "Neutral_Milk_Hotel",
       "name": "Neutral Milk Hotel",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Indie Folk / Baroque",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1989
+      "formed_year": 1989,
+      "subgenre": "Indie Folk / Baroque"
     },
     {
       "id": "Jeff_Mangum",
@@ -247,7 +249,7 @@
       "id": "Apples_in_Stereo",
       "name": "The Apples in Stereo",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Neo-Psychedelia",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1992
@@ -256,7 +258,7 @@
       "id": "Robert_Schneider",
       "name": "Robert Schneider",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Neo-Psychedelia",
       "type_role": "producer",
       "country": "USA"
     },
@@ -324,7 +326,7 @@
       "id": "Bright_Eyes",
       "name": "Bright Eyes",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1995
@@ -333,60 +335,9 @@
       "id": "Conor_Oberst",
       "name": "Conor Oberst",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "USA"
-    },
-    {
-      "id": "Phoebe_Bridgers",
-      "name": "Phoebe Bridgers",
-      "type": "person",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "USA"
-    },
-    {
-      "id": "Better_Oblivion_Community_Center",
-      "name": "Better Oblivion Community Center",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "USA",
-      "formed_year": 2019
-    },
-    {
-      "id": "boygenius",
-      "name": "boygenius",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "USA",
-      "formed_year": 2018
-    },
-    {
-      "id": "Julien_Baker",
-      "name": "Julien Baker",
-      "type": "person",
       "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
-    },
-    {
-      "id": "Lucy_Dacus",
-      "name": "Lucy Dacus",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "USA"
-    },
-    {
-      "id": "Big_Thief",
-      "name": "Big Thief",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "USA",
-      "formed_year": 2015
     },
     {
       "id": "Adrianne_Lenker",
@@ -508,7 +459,7 @@
       "id": "Bon_Iver",
       "name": "Bon Iver",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 2006
@@ -517,18 +468,9 @@
       "id": "Justin_Vernon",
       "name": "Justin Vernon",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "USA"
-    },
-    {
-      "id": "Big_Red_Machine",
-      "name": "Big Red Machine",
-      "type": "band",
       "genre": "Indie Rock",
       "type_role": "artist",
-      "country": "USA",
-      "formed_year": 2018
+      "country": "USA"
     },
     {
       "id": "Sufjan_Stevens",
@@ -555,15 +497,6 @@
       "country": "USA"
     },
     {
-      "id": "Bleachers",
-      "name": "Bleachers",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "USA",
-      "formed_year": 2014
-    },
-    {
       "id": "David_Byrne",
       "name": "David Byrne",
       "type": "person",
@@ -575,10 +508,11 @@
       "id": "Talking_Heads",
       "name": "Talking Heads",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "New Wave",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1975
+      "formed_year": 1975,
+      "subgenre": "New Wave"
     },
     {
       "id": "Vampire_Weekend",
@@ -652,18 +586,20 @@
       "id": "The_Strokes",
       "name": "The Strokes",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Garage Rock Revival",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1998
+      "formed_year": 1998,
+      "subgenre": "Garage Rock Revival"
     },
     {
       "id": "Julian_Casablancas",
       "name": "Julian Casablancas",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Garage Rock Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Garage Rock Revival"
     },
     {
       "id": "Albert_Hammond_Jr",
@@ -671,92 +607,103 @@
       "type": "person",
       "genre": "Garage Rock Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Garage Rock Revival"
     },
     {
       "id": "Interpol",
       "name": "Interpol",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1997
+      "formed_year": 1997,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Paul_Banks",
       "name": "Paul Banks",
       "type": "person",
-      "genre": "Garage Rock Revival",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Yeah_Yeah_Yeahs",
       "name": "Yeah Yeah Yeahs",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 2000
+      "formed_year": 2000,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Karen_O",
       "name": "Karen O",
       "type": "person",
-      "genre": "Garage Rock Revival",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Nick_Zinner",
       "name": "Nick Zinner",
       "type": "person",
-      "genre": "Garage Rock Revival",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "TV_on_the_Radio",
       "name": "TV on the Radio",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 2001
+      "formed_year": 2001,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Dave_Sitek",
       "name": "Dave Sitek",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "producer",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "LCD_Soundsystem",
       "name": "LCD Soundsystem",
       "type": "band",
-      "genre": "Dance-Punk",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 2002
+      "formed_year": 2002,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "James_Murphy",
       "name": "James Murphy",
       "type": "person",
-      "genre": "Dance-Punk",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Franz_Ferdinand",
       "name": "Franz Ferdinand",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "UK",
-      "formed_year": 2002
+      "formed_year": 2002,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Alex_Kapranos",
@@ -770,10 +717,11 @@
       "id": "FFS",
       "name": "FFS (Franz Ferdinand & Sparks)",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "UK/USA",
-      "formed_year": 2014
+      "formed_year": 2014,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Sparks",
@@ -788,35 +736,39 @@
       "id": "Bloc_Party",
       "name": "Bloc Party",
       "type": "band",
-      "genre": "Garage Rock Revival",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "UK",
-      "formed_year": 1999
+      "formed_year": 1999,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Kele_Okereke",
       "name": "Kele Okereke",
       "type": "person",
-      "genre": "Garage Rock Revival",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Arctic_Monkeys",
       "name": "Arctic Monkeys",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
       "country": "UK",
-      "formed_year": 2002
+      "formed_year": 2002,
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Alex_Turner",
       "name": "Alex Turner",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Miles_Kane",
@@ -839,7 +791,7 @@
       "id": "Tame_Impala",
       "name": "Tame Impala",
       "type": "band",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia",
       "formed_year": 2007
@@ -848,7 +800,7 @@
       "id": "Kevin_Parker",
       "name": "Kevin Parker",
       "type": "person",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia"
     },
@@ -856,7 +808,7 @@
       "id": "Pond",
       "name": "Pond",
       "type": "band",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia",
       "formed_year": 2008
@@ -865,7 +817,7 @@
       "id": "Jay_Watson",
       "name": "Jay Watson",
       "type": "person",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia"
     },
@@ -873,7 +825,7 @@
       "id": "King_Gizzard",
       "name": "King Gizzard & The Lizard Wizard",
       "type": "band",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia",
       "formed_year": 2010
@@ -882,7 +834,7 @@
       "id": "Stu_Mackenzie",
       "name": "Stu Mackenzie",
       "type": "person",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia"
     },
@@ -898,7 +850,7 @@
       "id": "Beach_House",
       "name": "Beach House",
       "type": "band",
-      "genre": "Shoegaze",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 2004
@@ -907,7 +859,7 @@
       "id": "Victoria_Legrand",
       "name": "Victoria Legrand",
       "type": "person",
-      "genre": "Shoegaze",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -915,7 +867,7 @@
       "id": "MGMT",
       "name": "MGMT",
       "type": "band",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 2002
@@ -924,7 +876,7 @@
       "id": "Andrew_VanWyngarden",
       "name": "Andrew VanWyngarden",
       "type": "person",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -932,7 +884,7 @@
       "id": "Flaming_Lips",
       "name": "The Flaming Lips",
       "type": "band",
-      "genre": "Neo-Psychedelia",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1983
@@ -1052,7 +1004,7 @@
       "id": "Dave_Grohl",
       "name": "Dave Grohl",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Grunge",
       "type_role": "artist",
       "country": "USA"
     },
@@ -1089,7 +1041,8 @@
       "genre": "Industrial",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1988
+      "formed_year": 1988,
+      "subgenre": "Industrial"
     },
     {
       "id": "Trent_Reznor",
@@ -1103,7 +1056,7 @@
       "id": "Butch_Vig",
       "name": "Butch Vig",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Grunge",
       "type_role": "producer",
       "country": "USA"
     },
@@ -1145,16 +1098,17 @@
       "id": "Sonic_Youth",
       "name": "Sonic Youth",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Noise Rock",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1981
+      "formed_year": 1981,
+      "subgenre": "Noise Rock"
     },
     {
       "id": "Thurston_Moore",
       "name": "Thurston Moore",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -1187,7 +1141,7 @@
       "id": "Gorillaz",
       "name": "Gorillaz",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Britpop",
       "type_role": "artist",
       "country": "UK",
       "formed_year": 1998
@@ -1204,18 +1158,20 @@
       "id": "Jack_White",
       "name": "Jack White",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Garage Rock Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Garage Rock Revival"
     },
     {
       "id": "The_White_Stripes",
       "name": "The White Stripes",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Garage Rock Revival",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1997
+      "formed_year": 1997,
+      "subgenre": "Garage Rock Revival"
     },
     {
       "id": "My_Bloody_Valentine",
@@ -1527,7 +1483,7 @@
       "id": "Adrian_Belew",
       "name": "Adrian Belew",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -1967,7 +1923,7 @@
       "id": "The_Million_Dollar_Quartet",
       "name": "The Million Dollar Quartet",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -1975,7 +1931,7 @@
       "id": "The_Tennessee_Two",
       "name": "The Tennessee Two",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -1983,7 +1939,7 @@
       "id": "June_Carter_Cash",
       "name": "June Carter Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -1991,7 +1947,7 @@
       "id": "The_Tennessee_Three",
       "name": "The Tennessee Three",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": ""
     },
@@ -1999,7 +1955,7 @@
       "id": "The_Highwaymen",
       "name": "The Highwaymen",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2007,7 +1963,7 @@
       "id": "Johnny_Cash_&_June_Carter_Cash",
       "name": "Johnny Cash & June Carter Cash",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": ""
     },
@@ -2015,7 +1971,7 @@
       "id": "Class_Of_'55",
       "name": "Class Of '55",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": ""
     },
@@ -2023,7 +1979,7 @@
       "id": "Chonny_Jash",
       "name": "Chonny Jash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "AU"
     },
@@ -2031,7 +1987,7 @@
       "id": "Carrie_Cash",
       "name": "Carrie Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": ""
     },
@@ -2039,7 +1995,7 @@
       "id": "John_Carter_Cash",
       "name": "John Carter Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2047,7 +2003,7 @@
       "id": "Rosanne_Cash",
       "name": "Rosanne Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2055,7 +2011,7 @@
       "id": "Cindy_Cash",
       "name": "Cindy Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2063,7 +2019,7 @@
       "id": "Carlene_Carter",
       "name": "Carlene Carter",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2071,7 +2027,7 @@
       "id": "Joanne_Cash",
       "name": "Joanne Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2079,7 +2035,7 @@
       "id": "Tommy_Cash",
       "name": "Tommy Cash",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "US"
     },
@@ -2087,7 +2043,7 @@
       "id": "The_Poops",
       "name": "The Poops",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "XE"
     },
@@ -2095,7 +2051,7 @@
       "id": "The_Capitols",
       "name": "The Capitols",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "NL"
     },
@@ -2103,7 +2059,7 @@
       "id": "A_Boy_Named_Johnny",
       "name": "A Boy Named Johnny",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "BE"
     },
@@ -2111,7 +2067,7 @@
       "id": "Dirty_Rotten_Cash",
       "name": "Dirty Rotten Cash",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "GB"
     },
@@ -2119,7 +2075,7 @@
       "id": "Johnny_Cash_Tribuut",
       "name": "Johnny Cash Tribuut",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "EE"
     },
@@ -2127,7 +2083,7 @@
       "id": "Jonny_Lyons",
       "name": "Jonny Lyons",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": ""
     },
@@ -2135,7 +2091,7 @@
       "id": "The_Man_In_Black_Trio",
       "name": "The Man In Black Trio",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "BE"
     },
@@ -2143,7 +2099,7 @@
       "id": "Million_Dollar_Reunion",
       "name": "Million Dollar Reunion",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": ""
     },
@@ -2151,7 +2107,7 @@
       "id": "Not_Johnny_Cash_&_the_Tennessee_Four",
       "name": "Not Johnny Cash & the Tennessee Four",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "BE"
     },
@@ -2159,7 +2115,7 @@
       "id": "Ride_This_Train",
       "name": "Ride This Train",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "BE"
     },
@@ -2167,7 +2123,7 @@
       "id": "Boz_Boorer",
       "name": "Boz Boorer",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "GB"
     },
@@ -2175,7 +2131,7 @@
       "id": "Alain_Whyte",
       "name": "Alain Whyte",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "GB"
     },
@@ -2183,7 +2139,7 @@
       "id": "The_Nosebleeds",
       "name": "The Nosebleeds",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "GB"
     },
@@ -2199,7 +2155,7 @@
       "id": "Mexrrissey",
       "name": "Mexrrissey",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "MX"
     },
@@ -2247,7 +2203,7 @@
       "id": "Viva_Morrissey",
       "name": "Viva Morrissey",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "GB"
     },
@@ -2496,9 +2452,10 @@
       "id": "The_Olivia_Tremor_Control",
       "name": "The Olivia Tremor Control",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Neo-Psychedelia",
       "type_role": "artist",
-      "country": "US"
+      "country": "US",
+      "subgenre": "Neo-Psychedelia"
     },
     {
       "id": "Synthetic_Flying_Machine",
@@ -2688,7 +2645,7 @@
       "id": "Park_Ave.",
       "name": "Park Ave.",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2696,7 +2653,7 @@
       "id": "Dolores_Diaz_&_The_Standby_Club",
       "name": "Dolores Diaz & The Standby Club",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2704,7 +2661,7 @@
       "id": "The_Faint",
       "name": "The Faint",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2712,7 +2669,7 @@
       "id": "Norman_Bailer",
       "name": "Norman Bailer",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -2720,7 +2677,7 @@
       "id": "Desaparecidos",
       "name": "Desaparecidos",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2728,7 +2685,7 @@
       "id": "Commander_Venus",
       "name": "Commander Venus",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2736,7 +2693,7 @@
       "id": "Conor_Oberst_and_the_Mystic_Valley_Band",
       "name": "Conor Oberst and the Mystic Valley Band",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2744,7 +2701,7 @@
       "id": "Monsters_of_Folk",
       "name": "Monsters of Folk",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2752,7 +2709,7 @@
       "id": "Matthew_Oberst_Sr.",
       "name": "Matthew Oberst Sr.",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -2760,7 +2717,7 @@
       "id": "Justin_Oberst",
       "name": "Justin Oberst",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -2768,166 +2725,6 @@
       "id": "Matt_Oberst",
       "name": "Matt Oberst",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Bo_Burnham",
-      "name": "Bo Burnham",
-      "type": "person",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Paul_Mescal",
-      "name": "Paul Mescal",
-      "type": "person",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "IE"
-    },
-    {
-      "id": "Buster",
-      "name": "Buster",
-      "type": "band",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Sloppy_Jane",
-      "name": "Sloppy Jane",
-      "type": "band",
-      "genre": "Indie Folk / Baroque",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Ruth_Young",
-      "name": "Ruth Young",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Chet_Baker_Trio",
-      "name": "Chet Baker Trio",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Chet_Baker_Sextet",
-      "name": "Chet Baker Sextet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Chet_Baker_Quintet",
-      "name": "Chet Baker Quintet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Chet_Baker_Quartet",
-      "name": "Chet Baker Quartet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Gerry_Mulligan_Quartet",
-      "name": "Gerry Mulligan Quartet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Chet_Baker_&_Crew",
-      "name": "Chet Baker & Crew",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Chet_Baker_Ensemble",
-      "name": "Chet Baker Ensemble",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "US"
-    },
-    {
-      "id": "Chet_Baker_Septet",
-      "name": "Chet Baker Septet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Chet_Baker_Octet",
-      "name": "Chet Baker Octet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Chet_Baker_Big_Band",
-      "name": "Chet Baker Big Band",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "The_Chet_Baker_&_Art_Pepper_Sextet",
-      "name": "The Chet Baker & Art Pepper Sextet",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Sixth_Army_Band",
-      "name": "Sixth Army Band",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Chet_Faker",
-      "name": "Chet Faker",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "AU"
-    },
-    {
-      "id": "Baker_Hansen",
-      "name": "Baker Hansen",
-      "type": "band",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "NO"
-    },
-    {
-      "id": "Dear_Ghosts",
-      "name": "Dear Ghosts",
-      "type": "band",
       "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
@@ -3168,7 +2965,7 @@
       "id": "DJ_Tay_James",
       "name": "DJ Tay James",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -3176,7 +2973,7 @@
       "id": "Selena_Gomez",
       "name": "Selena Gomez",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -3184,7 +2981,7 @@
       "id": "Hailey_Bieber",
       "name": "Hailey Bieber",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -3192,7 +2989,7 @@
       "id": "ArtistsCAN",
       "name": "ArtistsCAN",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -3200,7 +2997,7 @@
       "id": "Zack_Binspin",
       "name": "Zack Binspin",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -3208,7 +3005,7 @@
       "id": "Justin_Bieber_Nickelback",
       "name": "Justin Bieber Nickelback",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -3216,7 +3013,7 @@
       "id": "Jeremy_Bieber",
       "name": "Jeremy Bieber",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "CA"
     },
@@ -3224,7 +3021,7 @@
       "id": "Pattie_Mallette",
       "name": "Pattie Mallette",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "CA"
     },
@@ -3640,7 +3437,7 @@
       "id": "Flood",
       "name": "Flood (Mark Ellis)",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Industrial",
       "type_role": "producer",
       "country": "UK"
     },
@@ -3648,7 +3445,7 @@
       "id": "Alan_Moulder",
       "name": "Alan Moulder",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Shoegaze",
       "type_role": "producer",
       "country": "UK"
     },
@@ -3704,7 +3501,7 @@
       "id": "Primal_Scream",
       "name": "Primal Scream",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Shoegaze",
       "type_role": "artist",
       "country": "UK",
       "formed_year": 1982
@@ -3713,7 +3510,7 @@
       "id": "Bobby_Gillespie",
       "name": "Bobby Gillespie",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Shoegaze",
       "type_role": "artist",
       "country": "UK"
     },
@@ -3859,9 +3656,10 @@
       "id": "Faith_No_More",
       "name": "Faith No More",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Alternative Metal",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Alternative Metal"
     },
     {
       "id": "Rage_Against_the_Machine",
@@ -3901,23 +3699,26 @@
       "type": "person",
       "genre": "Post-Punk",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Post-Punk"
     },
     {
       "id": "New_Order",
       "name": "New Order",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "New Wave",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "New Wave"
     },
     {
       "id": "The_Cure",
       "name": "The Cure",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "New Wave",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "New Wave"
     },
     {
       "id": "Siouxsie_and_the_Banshees",
@@ -3925,7 +3726,8 @@
       "type": "band",
       "genre": "Post-Punk",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk"
     },
     {
       "id": "Bauhaus",
@@ -3933,7 +3735,8 @@
       "type": "band",
       "genre": "Post-Punk",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Post-Punk"
     },
     {
       "id": "The_Sisters_of_Mercy",
@@ -3955,9 +3758,10 @@
       "id": "Echo_&_the_Bunnymen",
       "name": "Echo & the Bunnymen",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "New Wave",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "New Wave"
     },
     {
       "id": "The_Psychedelic_Furs",
@@ -3971,17 +3775,19 @@
       "id": "Depeche_Mode",
       "name": "Depeche Mode",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "New Wave",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "New Wave"
     },
     {
       "id": "Tears_for_Fears",
       "name": "Tears for Fears",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "New Wave",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "New Wave"
     },
     {
       "id": "The_Chameleons",
@@ -4005,13 +3811,14 @@
       "type": "person",
       "genre": "Post-Punk",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk"
     },
     {
       "id": "REM",
       "name": "RE M",
       "type": "person",
-      "genre": "Alternative Metal",
+      "genre": "Alternative Rock",
       "type_role": "artist",
       "country": "UK"
     },
@@ -4069,7 +3876,8 @@
       "type": "band",
       "genre": "Hardcore Punk",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "Minor_Threat",
@@ -4077,7 +3885,8 @@
       "type": "person",
       "genre": "Hardcore Punk",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "Bad_Religion",
@@ -4093,7 +3902,8 @@
       "type": "person",
       "genre": "Hardcore Punk",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "Dead_Kennedys",
@@ -4101,7 +3911,8 @@
       "type": "person",
       "genre": "Hardcore Punk",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "Ride",
@@ -4147,15 +3958,16 @@
       "id": "Mazzy_Star",
       "name": "Mazzy Star",
       "type": "person",
-      "genre": "Shoegaze",
+      "genre": "Neo-Psychedelia",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Neo-Psychedelia"
     },
     {
       "id": "The_Sundays",
       "name": "The Sundays",
       "type": "band",
-      "genre": "Grunge",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "UK"
     },
@@ -4243,9 +4055,10 @@
       "id": "Spiritualized",
       "name": "Spiritualized",
       "type": "band",
-      "genre": "Britpop",
+      "genre": "Neo-Psychedelia",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Neo-Psychedelia"
     },
     {
       "id": "Massive_Attack",
@@ -4269,7 +4082,8 @@
       "type": "band",
       "genre": "Industrial",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Industrial"
     },
     {
       "id": "Skinny_Puppy",
@@ -4277,7 +4091,8 @@
       "type": "band",
       "genre": "Industrial",
       "type_role": "artist",
-      "country": "UK"
+      "country": "UK",
+      "subgenre": "Industrial"
     },
     {
       "id": "Tool",
@@ -4285,7 +4100,8 @@
       "type": "band",
       "genre": "Alternative Metal",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Alternative Metal"
     },
     {
       "id": "A_Perfect_Circle",
@@ -4301,7 +4117,8 @@
       "type": "band",
       "genre": "Alternative Metal",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Alternative Metal"
     },
     {
       "id": "Korn",
@@ -4333,7 +4150,8 @@
       "type": "band",
       "genre": "Industrial",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Industrial"
     },
     {
       "id": "Helmet",
@@ -4341,23 +4159,24 @@
       "type": "band",
       "genre": "Alternative Metal",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Alternative Metal"
     },
     {
       "id": "Rick_Rubin",
       "name": "Rick Rubin",
       "type": "person",
       "genre": "Alternative Rock",
-      "type_role": "artist",
-      "country": "UK"
+      "type_role": "producer",
+      "country": "USA"
     },
     {
       "id": "Daniel_Lanois",
       "name": "Daniel Lanois",
       "type": "person",
-      "genre": "Grunge",
-      "type_role": "artist",
-      "country": "UK"
+      "genre": "Post-Punk",
+      "type_role": "producer",
+      "country": "Canada"
     },
     {
       "id": "Mark_Ibold",
@@ -5355,7 +5174,7 @@
       "id": "Nate_Walcott",
       "name": "Nate Walcott",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -5363,7 +5182,7 @@
       "id": "Mike_Mogis",
       "name": "Mike Mogis",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -5371,41 +5190,9 @@
       "id": "Maya_Hawke",
       "name": "Maya Hawke",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
-    },
-    {
-      "id": "Justin_Felton",
-      "name": "Justin Felton",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "Jon_Nellen",
-      "name": "Jon Nellen",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "James_Krivchenia",
-      "name": "James Krivchenia",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": ""
-    },
-    {
-      "id": "מקס_אולארצ׳יק",
-      "name": "מקס אולארצ׳יק",
-      "type": "person",
-      "genre": "Indie Rock",
-      "type_role": "artist",
-      "country": "IL"
     },
     {
       "id": "David_French",
@@ -6467,7 +6254,7 @@
       "id": "Eric_Timothy_Carlson",
       "name": "Eric Timothy Carlson",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -6475,7 +6262,7 @@
       "id": "S._Carey",
       "name": "S. Carey",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -6483,7 +6270,7 @@
       "id": "Matt_McCaughan",
       "name": "Matt McCaughan",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "US"
     },
@@ -6491,7 +6278,7 @@
       "id": "Michael_Noyce",
       "name": "Michael Noyce",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": ""
     },
@@ -6533,7 +6320,7 @@
       "id": "Iggy_Pop",
       "name": "Iggy Pop",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Proto-Punk",
       "type_role": "artist",
       "country": "USA"
     },
@@ -6541,7 +6328,7 @@
       "id": "Beck",
       "name": "Beck",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Alternative Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -6608,7 +6395,7 @@
       "id": "John_McEntire",
       "name": "John McEntire",
       "type": "person",
-      "genre": "Post-Rock",
+      "genre": "Indie Rock",
       "type_role": "producer",
       "country": "USA"
     },
@@ -6616,17 +6403,19 @@
       "id": "Gordon_Raphael",
       "name": "Gordon Raphael",
       "type": "person",
-      "genre": "Indie Rock",
+      "genre": "Garage Rock Revival",
       "type_role": "producer",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Garage Rock Revival"
     },
     {
       "id": "The_Killers",
       "name": "The Killers",
       "type": "band",
-      "genre": "Indie Rock",
+      "genre": "Post-Punk Revival",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Post-Punk Revival"
     },
     {
       "id": "Explosions_in_the_Sky",
@@ -6751,19 +6540,10 @@
       "formed_year": 1988
     },
     {
-      "id": "DARK",
-      "name": "DARK",
-      "type": "band",
-      "genre": "Alternative Rock",
-      "type_role": "artist",
-      "country": "UK",
-      "formed_year": 2014
-    },
-    {
       "id": "Dolores_ORiordan",
       "name": "Dolores O'Riordan (The Cranberries)",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Post-Punk",
       "type_role": "artist",
       "country": "Ireland"
     },
@@ -6771,7 +6551,7 @@
       "id": "King_Crimson",
       "name": "King Crimson",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "UK",
       "formed_year": 1968
@@ -6796,7 +6576,7 @@
       "id": "Cedric_Bixler_Zavala",
       "name": "Cedric Bixler-Zavala",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -6804,7 +6584,7 @@
       "id": "At_the_Drive_In",
       "name": "At the Drive-In",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1994
@@ -6847,7 +6627,7 @@
       "id": "Daft_Punk",
       "name": "Daft Punk",
       "type": "band",
-      "genre": "Dance-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "France",
       "formed_year": 1993
@@ -6881,7 +6661,7 @@
       "id": "Marc_Bolan",
       "name": "Marc Bolan (T. Rex)",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "UK"
     },
@@ -6907,7 +6687,7 @@
       "id": "Bryan_Ferry",
       "name": "Bryan Ferry",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "UK"
     },
@@ -6915,7 +6695,7 @@
       "id": "Alice_Cooper",
       "name": "Alice Cooper",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -6943,7 +6723,8 @@
       "genre": "Hardcore Punk",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1977
+      "formed_year": 1977,
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "HR_Bad_Brains",
@@ -6959,7 +6740,8 @@
       "type": "person",
       "genre": "Hardcore Punk",
       "type_role": "artist",
-      "country": "USA"
+      "country": "USA",
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "Quicksand",
@@ -6968,13 +6750,14 @@
       "genre": "Hardcore Punk",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1990
+      "formed_year": 1990,
+      "subgenre": "Hardcore Punk"
     },
     {
       "id": "Walter_Schreifels",
       "name": "Walter Schreifels",
       "type": "person",
-      "genre": "Hardcore Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -6985,13 +6768,14 @@
       "genre": "Industrial",
       "type_role": "artist",
       "country": "Germany",
-      "formed_year": 1984
+      "formed_year": 1984,
+      "subgenre": "Industrial"
     },
     {
       "id": "Dead_Can_Dance",
       "name": "Dead Can Dance",
       "type": "band",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia",
       "formed_year": 1981
@@ -7000,7 +6784,7 @@
       "id": "Brendan_Perry",
       "name": "Brendan Perry",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "UK"
     },
@@ -7008,7 +6792,7 @@
       "id": "Lisa_Gerrard",
       "name": "Lisa Gerrard",
       "type": "person",
-      "genre": "Post-Punk",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "Australia"
     },
@@ -7016,7 +6800,7 @@
       "id": "Green_Day",
       "name": "Green Day",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1987
@@ -7025,7 +6809,7 @@
       "id": "Billie_Joe_Armstrong",
       "name": "Billie Joe Armstrong",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7033,7 +6817,7 @@
       "id": "Rob_Cavallo",
       "name": "Rob Cavallo",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "producer",
       "country": "USA"
     },
@@ -7041,7 +6825,7 @@
       "id": "The_Offspring",
       "name": "The Offspring",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1984
@@ -7050,7 +6834,7 @@
       "id": "Dexter_Holland",
       "name": "Dexter Holland",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7058,7 +6842,7 @@
       "id": "Blink_182",
       "name": "Blink-182",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1992
@@ -7067,7 +6851,7 @@
       "id": "Travis_Barker",
       "name": "Travis Barker",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7075,7 +6859,7 @@
       "id": "Jerry_Finn",
       "name": "Jerry Finn",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "producer",
       "country": "USA"
     },
@@ -7083,7 +6867,7 @@
       "id": "No_Doubt",
       "name": "No Doubt",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1986
@@ -7092,7 +6876,7 @@
       "id": "Gwen_Stefani",
       "name": "Gwen Stefani",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7100,7 +6884,7 @@
       "id": "Sublime",
       "name": "Sublime",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1988
@@ -7109,7 +6893,7 @@
       "id": "Rancid",
       "name": "Rancid",
       "type": "band",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 1991
@@ -7118,7 +6902,7 @@
       "id": "Tim_Armstrong",
       "name": "Tim Armstrong",
       "type": "person",
-      "genre": "Alternative Rock",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7129,7 +6913,8 @@
       "genre": "Alternative Metal",
       "type_role": "artist",
       "country": "USA",
-      "formed_year": 1994
+      "formed_year": 1994,
+      "subgenre": "Alternative Metal"
     },
     {
       "id": "Serj_Tankian",
@@ -7160,7 +6945,7 @@
       "id": "Fleet_Foxes",
       "name": "Fleet Foxes",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 2006
@@ -7169,7 +6954,7 @@
       "id": "Robin_Pecknold",
       "name": "Robin Pecknold",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7185,7 +6970,7 @@
       "id": "Grizzly_Bear",
       "name": "Grizzly Bear",
       "type": "band",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA",
       "formed_year": 2002
@@ -7194,7 +6979,7 @@
       "id": "Daniel_Rossen",
       "name": "Daniel Rossen",
       "type": "person",
-      "genre": "Indie Folk / Baroque",
+      "genre": "Indie Rock",
       "type_role": "artist",
       "country": "USA"
     },
@@ -7223,6 +7008,726 @@
       "type_role": "artist",
       "country": "UK",
       "formed_year": 2001
+    },
+    {
+      "id": "Brendan_OBrien",
+      "name": "Brendan O'Brien",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Alternative Rock",
+      "country": "USA"
+    },
+    {
+      "id": "Paul_Kolderie_Sean_Slade",
+      "name": "Paul Q. Kolderie & Sean Slade",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Alternative Rock",
+      "country": "USA"
+    },
+    {
+      "id": "Terry_Date",
+      "name": "Terry Date",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Grunge",
+      "country": "USA"
+    },
+    {
+      "id": "Steve_Lillywhite",
+      "name": "Steve Lillywhite",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Post-Punk",
+      "country": "UK"
+    },
+    {
+      "id": "Owen_Morris",
+      "name": "Owen Morris",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Britpop",
+      "country": "UK"
+    },
+    {
+      "id": "John_Leckie",
+      "name": "John Leckie",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Britpop",
+      "country": "UK"
+    },
+    {
+      "id": "Nick_Launay",
+      "name": "Nick Launay",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Post-Punk",
+      "country": "UK"
+    },
+    {
+      "id": "Don_Zientara",
+      "name": "Don Zientara",
+      "type": "person",
+      "type_role": "producer",
+      "genre": "Hardcore Punk",
+      "country": "USA"
+    },
+    {
+      "id": "Blondie",
+      "name": "Blondie",
+      "type": "band",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "US"
+    },
+    {
+      "id": "The_Cars",
+      "name": "The Cars",
+      "type": "band",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "US"
+    },
+    {
+      "id": "The_Police",
+      "name": "The Police",
+      "type": "band",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "UK"
+    },
+    {
+      "id": "Duran_Duran",
+      "name": "Duran Duran",
+      "type": "band",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "UK"
+    },
+    {
+      "id": "Gary_Numan",
+      "name": "Gary Numan",
+      "type": "person",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "UK"
+    },
+    {
+      "id": "OMD",
+      "name": "Orchestral Manoeuvres in the Dark",
+      "type": "band",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "UK"
+    },
+    {
+      "id": "Elvis_Costello",
+      "name": "Elvis Costello",
+      "type": "person",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "UK"
+    },
+    {
+      "id": "XTC",
+      "name": "XTC",
+      "type": "band",
+      "genre": "New Wave",
+      "subgenre": "New Wave",
+      "country": "UK"
+    },
+    {
+      "id": "Front_242",
+      "name": "Front 242",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "BE"
+    },
+    {
+      "id": "Pigface",
+      "name": "Pigface",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "US"
+    },
+    {
+      "id": "Throbbing_Gristle",
+      "name": "Throbbing Gristle",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "UK"
+    },
+    {
+      "id": "Filter",
+      "name": "Filter",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "US"
+    },
+    {
+      "id": "Einstürzende_Neubauten",
+      "name": "Einstürzende Neubauten",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "DE"
+    },
+    {
+      "id": "Cabaret_Voltaire",
+      "name": "Cabaret Voltaire",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "UK"
+    },
+    {
+      "id": "Revolting_Cocks",
+      "name": "Revolting Cocks",
+      "type": "band",
+      "genre": "Industrial",
+      "subgenre": "Industrial",
+      "country": "US"
+    },
+    {
+      "id": "Living_Colour",
+      "name": "Living Colour",
+      "type": "band",
+      "genre": "Alternative Metal",
+      "subgenre": "Alternative Metal",
+      "country": "US"
+    },
+    {
+      "id": "White_Zombie",
+      "name": "White Zombie",
+      "type": "band",
+      "genre": "Alternative Metal",
+      "subgenre": "Alternative Metal",
+      "country": "US"
+    },
+    {
+      "id": "Prong",
+      "name": "Prong",
+      "type": "band",
+      "genre": "Alternative Metal",
+      "subgenre": "Alternative Metal",
+      "country": "US"
+    },
+    {
+      "id": "Rollins_Band",
+      "name": "Rollins Band",
+      "type": "band",
+      "genre": "Alternative Metal",
+      "subgenre": "Alternative Metal",
+      "country": "US"
+    },
+    {
+      "id": "Primus",
+      "name": "Primus",
+      "type": "band",
+      "genre": "Alternative Metal",
+      "subgenre": "Alternative Metal",
+      "country": "US"
+    },
+    {
+      "id": "Les_Claypool",
+      "name": "Les Claypool",
+      "type": "person",
+      "genre": "Alternative Metal",
+      "subgenre": "Alternative Metal",
+      "country": "US"
+    },
+    {
+      "id": "Gorilla_Biscuits",
+      "name": "Gorilla Biscuits",
+      "type": "band",
+      "genre": "Hardcore Punk",
+      "subgenre": "Hardcore Punk",
+      "country": "US"
+    },
+    {
+      "id": "Agnostic_Front",
+      "name": "Agnostic Front",
+      "type": "band",
+      "genre": "Hardcore Punk",
+      "subgenre": "Hardcore Punk",
+      "country": "US"
+    },
+    {
+      "id": "Cro_Mags",
+      "name": "Cro-Mags",
+      "type": "band",
+      "genre": "Hardcore Punk",
+      "subgenre": "Hardcore Punk",
+      "country": "US"
+    },
+    {
+      "id": "Sick_of_It_All",
+      "name": "Sick of It All",
+      "type": "band",
+      "genre": "Hardcore Punk",
+      "subgenre": "Hardcore Punk",
+      "country": "US"
+    },
+    {
+      "id": "Suicidal_Tendencies",
+      "name": "Suicidal Tendencies",
+      "type": "band",
+      "genre": "Hardcore Punk",
+      "subgenre": "Hardcore Punk",
+      "country": "US"
+    },
+    {
+      "id": "The_Jesus_Lizard",
+      "name": "The Jesus Lizard",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "Big_Black",
+      "name": "Big Black",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "Shellac",
+      "name": "Shellac",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "Unwound",
+      "name": "Unwound",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "Drive_Like_Jehu",
+      "name": "Drive Like Jehu",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "Melt_Banana",
+      "name": "Melt-Banana",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "JP"
+    },
+    {
+      "id": "Scratch_Acid",
+      "name": "Scratch Acid",
+      "type": "band",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "David_Yow",
+      "name": "David Yow",
+      "type": "person",
+      "genre": "Noise Rock",
+      "subgenre": "Noise Rock",
+      "country": "US"
+    },
+    {
+      "id": "The_Cramps",
+      "name": "The Cramps",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "The_Fuzztones",
+      "name": "The Fuzztones",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "The_Gories",
+      "name": "The Gories",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Dead_Moon",
+      "name": "Dead Moon",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Jon_Spencer_Blues_Explosion",
+      "name": "Jon Spencer Blues Explosion",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Thee_Headcoats",
+      "name": "Thee Headcoats",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "UK"
+    },
+    {
+      "id": "Billy_Childish",
+      "name": "Billy Childish",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "UK"
+    },
+    {
+      "id": "Flat_Duo_Jets",
+      "name": "Flat Duo Jets",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "The_Chesterfield_Kings",
+      "name": "The Chesterfield Kings",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Elliott_Smith",
+      "name": "Elliott Smith",
+      "type": "person",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Smog",
+      "name": "Smog (Bill Callahan)",
+      "type": "band",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Palace_Music",
+      "name": "Palace Music (Will Oldham)",
+      "type": "band",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Sparklehorse",
+      "name": "Sparklehorse",
+      "type": "band",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Songs_Ohia",
+      "name": "Songs: Ohia (Jason Molina)",
+      "type": "band",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Cat_Power",
+      "name": "Cat Power",
+      "type": "person",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Red_House_Painters",
+      "name": "Red House Painters",
+      "type": "band",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Mark_Kozelek",
+      "name": "Mark Kozelek",
+      "type": "person",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Vic_Chesnutt",
+      "name": "Vic Chesnutt",
+      "type": "person",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Mercury_Rev",
+      "name": "Mercury Rev",
+      "type": "band",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "US"
+    },
+    {
+      "id": "Spacemen_3",
+      "name": "Spacemen 3",
+      "type": "band",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "UK"
+    },
+    {
+      "id": "Brian_Jonestown_Massacre",
+      "name": "The Brian Jonestown Massacre",
+      "type": "band",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "US"
+    },
+    {
+      "id": "The_Dandy_Warhols",
+      "name": "The Dandy Warhols",
+      "type": "band",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "US"
+    },
+    {
+      "id": "Robyn_Hitchcock",
+      "name": "Robyn Hitchcock",
+      "type": "person",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "UK"
+    },
+    {
+      "id": "The_Soft_Boys",
+      "name": "The Soft Boys",
+      "type": "band",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "UK"
+    },
+    {
+      "id": "The_Rain_Parade",
+      "name": "The Rain Parade",
+      "type": "band",
+      "genre": "Neo-Psychedelia",
+      "subgenre": "Neo-Psychedelia",
+      "country": "US"
+    },
+    {
+      "id": "PJ_Harvey",
+      "name": "PJ Harvey",
+      "type": "person",
+      "genre": "Indie Rock",
+      "subgenre": "Indie Rock",
+      "country": "UK"
+    },
+    {
+      "id": "Michael_Stipe",
+      "name": "Michael Stipe",
+      "type": "person",
+      "genre": "Alternative Rock",
+      "subgenre": "Alternative Rock",
+      "country": "US"
+    },
+    {
+      "id": "Tom_Waits",
+      "name": "Tom Waits",
+      "type": "person",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
+    },
+    {
+      "id": "Nick_Valensi",
+      "name": "Nick Valensi",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Nikolai_Fraiture",
+      "name": "Nikolai Fraiture",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Fabrizio_Moretti",
+      "name": "Fabrizio Moretti",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Meg_White",
+      "name": "Meg White",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "The_Hives",
+      "name": "The Hives",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "SE"
+    },
+    {
+      "id": "Howlin_Pelle_Almqvist",
+      "name": "Howlin' Pelle Almqvist",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "SE"
+    },
+    {
+      "id": "The_Vines",
+      "name": "The Vines",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "AU"
+    },
+    {
+      "id": "The_Libertines",
+      "name": "The Libertines",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "UK"
+    },
+    {
+      "id": "Pete_Doherty",
+      "name": "Pete Doherty",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "UK"
+    },
+    {
+      "id": "Carl_Barât",
+      "name": "Carl Barât",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "UK"
+    },
+    {
+      "id": "The_Black_Keys",
+      "name": "The Black Keys",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Dan_Auerbach",
+      "name": "Dan Auerbach",
+      "type": "person",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Kings_of_Leon",
+      "name": "Kings of Leon",
+      "type": "band",
+      "genre": "Garage Rock Revival",
+      "subgenre": "Garage Rock Revival",
+      "country": "US"
+    },
+    {
+      "id": "Daniel_Kessler",
+      "name": "Daniel Kessler",
+      "type": "person",
+      "genre": "Post-Punk Revival",
+      "subgenre": "Post-Punk Revival",
+      "country": "US"
+    },
+    {
+      "id": "Sam_Fogarino",
+      "name": "Sam Fogarino",
+      "type": "person",
+      "genre": "Post-Punk Revival",
+      "subgenre": "Post-Punk Revival",
+      "country": "US"
+    },
+    {
+      "id": "Carlos_D",
+      "name": "Carlos D",
+      "type": "person",
+      "genre": "Post-Punk Revival",
+      "subgenre": "Post-Punk Revival",
+      "country": "US"
+    },
+    {
+      "id": "Peter_Katis",
+      "name": "Peter Katis",
+      "type": "person",
+      "genre": "Post-Punk Revival",
+      "subgenre": "Post-Punk Revival",
+      "country": "US"
+    },
+    {
+      "id": "Brian_Chase",
+      "name": "Brian Chase",
+      "type": "person",
+      "genre": "Post-Punk Revival",
+      "subgenre": "Post-Punk Revival",
+      "country": "US"
+    },
+    {
+      "id": "Editors",
+      "name": "Editors",
+      "type": "band",
+      "genre": "Post-Punk Revival",
+      "subgenre": "Post-Punk Revival",
+      "country": "UK"
+    },
+    {
+      "id": "Regina_Spektor",
+      "name": "Regina Spektor",
+      "type": "person",
+      "genre": "Indie Folk / Baroque",
+      "subgenre": "Indie Folk / Baroque",
+      "country": "US"
     }
   ],
   "edges": [
@@ -7729,98 +8234,6 @@
       ]
     },
     {
-      "source": "Conor_Oberst",
-      "target": "Phoebe_Bridgers",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Parceria no Duo 'Better Oblivion Community Center'",
-      "critic_score": 88,
-      "works": [
-        "Better Oblivion Community Center"
-      ]
-    },
-    {
-      "source": "Conor_Oberst",
-      "target": "Better_Oblivion_Community_Center",
-      "weight_count": 3,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Co-fundador da Banda em Duo",
-      "critic_score": 88,
-      "works": [
-        "Better Oblivion Community Center",
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Phoebe_Bridgers",
-      "target": "Better_Oblivion_Community_Center",
-      "weight_count": 3,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Co-fundadora da Banda em Duo",
-      "critic_score": 88,
-      "works": [
-        "Better Oblivion Community Center",
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Phoebe_Bridgers",
-      "target": "boygenius",
-      "weight_count": 3,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante do Supergrupo Boygenius",
-      "critic_score": 94,
-      "works": [
-        "boygenius EP",
-        "the record",
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "boygenius",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante do Supergrupo Boygenius",
-      "critic_score": 94,
-      "works": [
-        "boygenius EP",
-        "the record"
-      ]
-    },
-    {
-      "source": "Lucy_Dacus",
-      "target": "boygenius",
-      "weight_count": 3,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante do Supergrupo Boygenius",
-      "critic_score": 94,
-      "works": [
-        "boygenius EP",
-        "the record",
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Adrianne_Lenker",
-      "target": "Big_Thief",
-      "weight_count": 5,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Vocalista e Alma Lírica do Big Thief",
-      "critic_score": 93,
-      "works": [
-        "Capacity",
-        "Dragon New Warm Mountain I Believe in You"
-      ]
-    },
-    {
       "source": "Win_Butler",
       "target": "Arcade_Fire",
       "weight_count": 6,
@@ -7981,30 +8394,6 @@
       ]
     },
     {
-      "source": "Aaron_Dessner",
-      "target": "Big_Red_Machine",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Co-fundador da Banda em Duo",
-      "critic_score": 87,
-      "works": [
-        "Big Red Machine"
-      ]
-    },
-    {
-      "source": "Justin_Vernon",
-      "target": "Big_Red_Machine",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Co-fundador da Banda em Duo",
-      "critic_score": 87,
-      "works": [
-        "Big Red Machine"
-      ]
-    },
-    {
       "source": "Sufjan_Stevens",
       "target": "The_National",
       "weight_count": 3,
@@ -8028,19 +8417,6 @@
       "works": [
         "Masseduction",
         "Daddy's Home"
-      ]
-    },
-    {
-      "source": "Jack_Antonoff",
-      "target": "Bleachers",
-      "weight_count": 4,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Líder e Criador do Projeto Bleachers",
-      "critic_score": 82,
-      "works": [
-        "Strange Desire",
-        "Take the Sadness Out of Saturday Night"
       ]
     },
     {
@@ -11258,246 +11634,6 @@
       "critic_score": 88,
       "works": [
         "Sibling"
-      ]
-    },
-    {
-      "source": "Phoebe_Bridgers",
-      "target": "Bo_Burnham",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Colaboração MusicBrainz (involved with)",
-      "critic_score": 88,
-      "works": [
-        "Involved With"
-      ]
-    },
-    {
-      "source": "Phoebe_Bridgers",
-      "target": "Paul_Mescal",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Colaboração MusicBrainz (involved with)",
-      "critic_score": 88,
-      "works": [
-        "Involved With"
-      ]
-    },
-    {
-      "source": "Phoebe_Bridgers",
-      "target": "Buster",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Phoebe_Bridgers",
-      "target": "Sloppy_Jane",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Ruth_Young",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Colaboração MusicBrainz (involved with)",
-      "critic_score": 88,
-      "works": [
-        "Involved With"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Trio",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Sextet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Quintet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Quartet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Gerry_Mulligan_Quartet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_&_Crew",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Ensemble",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Septet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Octet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Baker_Big_Band",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "The_Chet_Baker_&_Art_Pepper_Sextet",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Sixth_Army_Band",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Chet_Faker",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Colaboração MusicBrainz (named after artist)",
-      "critic_score": 88,
-      "works": [
-        "Named After Artist"
-      ]
-    },
-    {
-      "source": "Julien_Baker",
-      "target": "Baker_Hansen",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Colaboração MusicBrainz (tribute)",
-      "critic_score": 88,
-      "works": [
-        "Tribute"
-      ]
-    },
-    {
-      "source": "Lucy_Dacus",
-      "target": "Dear_Ghosts",
-      "weight_count": 2,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto Oficial",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
       ]
     },
     {
@@ -14728,66 +14864,6 @@
       ]
     },
     {
-      "source": "Big_Thief",
-      "target": "Justin_Felton",
-      "weight_count": 2,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Relacionamento Histórico (instrumental supporting musician)",
-      "critic_score": 94,
-      "works": [
-        "Instrumental Supporting Musician"
-      ]
-    },
-    {
-      "source": "Big_Thief",
-      "target": "Jon_Nellen",
-      "weight_count": 4,
-      "relation_type": "collaboration",
-      "relation_label": "colaboração",
-      "relation_desc": "Relacionamento Histórico (instrumental supporting musician)",
-      "critic_score": 98,
-      "works": [
-        "Instrumental Supporting Musician"
-      ]
-    },
-    {
-      "source": "Big_Thief",
-      "target": "James_Krivchenia",
-      "weight_count": 5,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto 80s/90s",
-      "critic_score": 88,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Big_Thief",
-      "target": "מקס_אולארצ׳יק",
-      "weight_count": 4,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto 80s/90s",
-      "critic_score": 90,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
-      "source": "Big_Thief",
-      "target": "Buck_Meek",
-      "weight_count": 6,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Integrante de Banda / Projeto 80s/90s",
-      "critic_score": 94,
-      "works": [
-        "Member Of Band"
-      ]
-    },
-    {
       "source": "Broken_Social_Scene",
       "target": "David_French",
       "weight_count": 4,
@@ -17959,18 +18035,6 @@
       ]
     },
     {
-      "source": "Dolores_ORiordan",
-      "target": "DARK",
-      "weight_count": 3,
-      "relation_type": "member",
-      "relation_label": "integrante",
-      "relation_desc": "Vocalista da Banda DARK",
-      "critic_score": 94,
-      "works": [
-        "Science Agrees"
-      ]
-    },
-    {
       "source": "Johnny_Marr",
       "target": "Bernard_Sumner",
       "weight_count": 3,
@@ -18837,6 +18901,1136 @@
       "critic_score": 95,
       "works": [
         "00s Indie Folk"
+      ]
+    },
+    {
+      "source": "Brendan_OBrien",
+      "target": "Pearl_Jam",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor dos Álbuns Marco 'Vs.', 'Vitalogy', 'No Code' e 'Yield'",
+      "critic_score": 98,
+      "works": [
+        "Vs.",
+        "Vitalogy",
+        "Yield"
+      ]
+    },
+    {
+      "source": "Brendan_OBrien",
+      "target": "Stone_Temple_Pilots",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Core', 'Purple' e 'Tiny Music...'",
+      "critic_score": 96,
+      "works": [
+        "Core",
+        "Purple"
+      ]
+    },
+    {
+      "source": "Brendan_OBrien",
+      "target": "Soundgarden",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor do Álbum Clássico 'Superunknown'",
+      "critic_score": 98,
+      "works": [
+        "Superunknown"
+      ]
+    },
+    {
+      "source": "Brendan_OBrien",
+      "target": "Rage_Against_the_Machine",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Evil Empire' e 'The Battle of Los Angeles'",
+      "critic_score": 97,
+      "works": [
+        "Evil Empire",
+        "The Battle of Los Angeles"
+      ]
+    },
+    {
+      "source": "Brendan_OBrien",
+      "target": "Red_Hot_Chili_Peppers",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Engenheiro de Mixagem de 'Blood Sugar Sex Magik'",
+      "critic_score": 96,
+      "works": [
+        "Blood Sugar Sex Magik"
+      ]
+    },
+    {
+      "source": "Paul_Kolderie_Sean_Slade",
+      "target": "Radiohead",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtores do Álbum de Estreia 'Pablo Honey' (incluindo 'Creep')",
+      "critic_score": 93,
+      "works": [
+        "Pablo Honey"
+      ]
+    },
+    {
+      "source": "Paul_Kolderie_Sean_Slade",
+      "target": "Dinosaur_Jr",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtores do Álbum Marco 'Where You Been'",
+      "critic_score": 94,
+      "works": [
+        "Where You Been"
+      ]
+    },
+    {
+      "source": "Paul_Kolderie_Sean_Slade",
+      "target": "Hole",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtores de 'Live Through This'",
+      "critic_score": 96,
+      "works": [
+        "Live Through This"
+      ]
+    },
+    {
+      "source": "Paul_Kolderie_Sean_Slade",
+      "target": "Pixies",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Engenheiros de Mixagem em Gravações Iniciais",
+      "critic_score": 90,
+      "works": [
+        "Early Sessions"
+      ]
+    },
+    {
+      "source": "Terry_Date",
+      "target": "Soundgarden",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Louder Than Love' e 'Badmotorfinger'",
+      "critic_score": 97,
+      "works": [
+        "Badmotorfinger"
+      ]
+    },
+    {
+      "source": "Terry_Date",
+      "target": "Deftones",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Adrenaline', 'Around the Fur' e 'White Pony'",
+      "critic_score": 98,
+      "works": [
+        "White Pony",
+        "Around the Fur"
+      ]
+    },
+    {
+      "source": "Steve_Lillywhite",
+      "target": "The_Psychedelic_Furs",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Talk Talk Talk'",
+      "critic_score": 94,
+      "works": [
+        "Talk Talk Talk"
+      ]
+    },
+    {
+      "source": "Jack_Endino",
+      "target": "Screaming_Trees",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Buzz Factory'",
+      "critic_score": 91,
+      "works": [
+        "Buzz Factory"
+      ]
+    },
+    {
+      "source": "Owen_Morris",
+      "target": "Oasis",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'Definitely Maybe' e '(What's the Story) Morning Glory?'",
+      "critic_score": 99,
+      "works": [
+        "Definitely Maybe",
+        "Morning Glory"
+      ]
+    },
+    {
+      "source": "Owen_Morris",
+      "target": "The_Verve",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'A Northern Soul'",
+      "critic_score": 93,
+      "works": [
+        "A Northern Soul"
+      ]
+    },
+    {
+      "source": "John_Leckie",
+      "target": "The_Stone_Roses",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor do Álbum Obra-Prima 'The Stone Roses'",
+      "critic_score": 100,
+      "works": [
+        "The Stone Roses"
+      ]
+    },
+    {
+      "source": "John_Leckie",
+      "target": "Radiohead",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor do Álbum 'The Bends'",
+      "critic_score": 98,
+      "works": [
+        "The Bends"
+      ]
+    },
+    {
+      "source": "John_Leckie",
+      "target": "The_Verve",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'A Storm in Heaven'",
+      "critic_score": 94,
+      "works": [
+        "A Storm in Heaven"
+      ]
+    },
+    {
+      "source": "Don_Zientara",
+      "target": "Fugazi",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Engenheiro/Produtor de 'Repeater' e 'In on the Kill Taker'",
+      "critic_score": 98,
+      "works": [
+        "Repeater"
+      ]
+    },
+    {
+      "source": "Don_Zientara",
+      "target": "Minor_Threat",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Engenheiro de 'Out of Step'",
+      "critic_score": 97,
+      "works": [
+        "Out of Step"
+      ]
+    },
+    {
+      "source": "Nick_Launay",
+      "target": "Gang_of_Four",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produtor de 'To Hell with Poverty!'",
+      "critic_score": 93,
+      "works": [
+        "To Hell with Poverty!"
+      ]
+    },
+    {
+      "source": "Steve_Lillywhite",
+      "target": "The_Cure",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Produção e engenharia de faixas clássicas",
+      "critic_score": 90,
+      "works": [
+        "Three Imaginary Boys"
+      ]
+    },
+    {
+      "source": "Steve_Lillywhite",
+      "target": "Talking_Heads",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Produção de Naked",
+      "critic_score": 88,
+      "works": [
+        "Naked"
+      ]
+    },
+    {
+      "source": "Steve_Lillywhite",
+      "target": "XTC",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Produção de Drums and Wires",
+      "critic_score": 92,
+      "works": [
+        "Drums and Wires"
+      ]
+    },
+    {
+      "source": "The_Cars",
+      "target": "Blondie",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Turnês conjuntas e cena New Wave US",
+      "critic_score": 85,
+      "works": [
+        "CBGB Live"
+      ]
+    },
+    {
+      "source": "The_Police",
+      "target": "Elvis_Costello",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Parceria de gravação e festivais New Wave",
+      "critic_score": 87,
+      "works": [
+        "Stiff Records Tour"
+      ]
+    },
+    {
+      "source": "Duran_Duran",
+      "target": "Depeche_Mode",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Cena Synth-Pop / New Wave britânica",
+      "critic_score": 86,
+      "works": [
+        "UK Synth Wave"
+      ]
+    },
+    {
+      "source": "Gary_Numan",
+      "target": "Nine_Inch_Nails",
+      "weight_count": 3,
+      "relation_type": "guest",
+      "relation_desc": "Participação em turnês e gravações industriais",
+      "critic_score": 94,
+      "works": [
+        "Wave World Tour"
+      ]
+    },
+    {
+      "source": "OMD",
+      "target": "Depeche_Mode",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Pioneiros Synth-Pop New Wave",
+      "critic_score": 88,
+      "works": [
+        "Mute Records Live"
+      ]
+    },
+    {
+      "source": "Front_242",
+      "target": "Ministry",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Turnês de EBM / Industrial Rock",
+      "critic_score": 90,
+      "works": [
+        "Wax Trax! Sessions"
+      ]
+    },
+    {
+      "source": "Pigface",
+      "target": "Trent_Reznor",
+      "weight_count": 3,
+      "relation_type": "guest",
+      "relation_desc": "Supergrupo de Industrial Rock com Trent Reznor",
+      "critic_score": 92,
+      "works": [
+        "Gub"
+      ]
+    },
+    {
+      "source": "Pigface",
+      "target": "Ministry",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Parceria com Al Jourgensen",
+      "critic_score": 91,
+      "works": [
+        "Wax Trax! Supergroup"
+      ]
+    },
+    {
+      "source": "Filter",
+      "target": "Nine_Inch_Nails",
+      "weight_count": 3,
+      "relation_type": "member",
+      "relation_desc": "Richard Patrick tocava no NIN antes de formar o Filter",
+      "critic_score": 93,
+      "works": [
+        "Pretty Hate Machine Tour"
+      ]
+    },
+    {
+      "source": "Revolting_Cocks",
+      "target": "Ministry",
+      "weight_count": 4,
+      "relation_type": "member",
+      "relation_desc": "Projeto paralelo de Al Jourgensen",
+      "critic_score": 89,
+      "works": [
+        "Big Sexy Land"
+      ]
+    },
+    {
+      "source": "Living_Colour",
+      "target": "Rick_Rubin",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Produção e selo Def American",
+      "critic_score": 90,
+      "works": [
+        "Stain"
+      ]
+    },
+    {
+      "source": "White_Zombie",
+      "target": "Prong",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Cena Alt Metal / Industrial Metal de Nova York",
+      "critic_score": 87,
+      "works": [
+        "NYC Metal Tour"
+      ]
+    },
+    {
+      "source": "Primus",
+      "target": "Les_Claypool",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Líder e baixista do Primus",
+      "critic_score": 95,
+      "works": [
+        "Frizzle Fry"
+      ]
+    },
+    {
+      "source": "Rollins_Band",
+      "target": "Henry_Rollins",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Vocalista e fundador",
+      "critic_score": 93,
+      "works": [
+        "Weight"
+      ]
+    },
+    {
+      "source": "Gorilla_Biscuits",
+      "target": "Quicksand",
+      "weight_count": 4,
+      "relation_type": "member",
+      "relation_desc": "Walter Schreifels fundou ambas as bandas",
+      "critic_score": 94,
+      "works": [
+        "Slip"
+      ]
+    },
+    {
+      "source": "Agnostic_Front",
+      "target": "Sick_of_It_All",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Cena NYHC (New York Hardcore)",
+      "critic_score": 90,
+      "works": [
+        "CBGB Hardcore Matinees"
+      ]
+    },
+    {
+      "source": "Cro_Mags",
+      "target": "Agnostic_Front",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Pioneiros do Crossover NYHC",
+      "critic_score": 91,
+      "works": [
+        "The Age of Quarrel"
+      ]
+    },
+    {
+      "source": "Big_Black",
+      "target": "Steve_Albini",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Banda fundada por Steve Albini",
+      "critic_score": 97,
+      "works": [
+        "Atomizer"
+      ]
+    },
+    {
+      "source": "Shellac",
+      "target": "Steve_Albini",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Trio de Noise Rock com Steve Albini",
+      "critic_score": 96,
+      "works": [
+        "At Action Park"
+      ]
+    },
+    {
+      "source": "The_Jesus_Lizard",
+      "target": "Steve_Albini",
+      "weight_count": 4,
+      "relation_type": "producer",
+      "relation_desc": "Produção de Goat e Liar",
+      "critic_score": 98,
+      "works": [
+        "Goat"
+      ]
+    },
+    {
+      "source": "The_Jesus_Lizard",
+      "target": "David_Yow",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Vocalista lendário",
+      "critic_score": 95,
+      "works": [
+        "Liar"
+      ]
+    },
+    {
+      "source": "Scratch_Acid",
+      "target": "David_Yow",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Banda pioneira de Noise Rock em Austin",
+      "critic_score": 93,
+      "works": [
+        "Just Keep Eating"
+      ]
+    },
+    {
+      "source": "Melt_Banana",
+      "target": "Steve_Albini",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Gravação de Noise Rock / Grindcore experimental",
+      "critic_score": 91,
+      "works": [
+        "Charlie"
+      ]
+    },
+    {
+      "source": "The_Fuzztones",
+      "target": "The_Cramps",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Pioneiros do 80s Garage Revival",
+      "critic_score": 88,
+      "works": [
+        "Lysergic Emanations"
+      ]
+    },
+    {
+      "source": "The_Gories",
+      "target": "Jack_White",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Maior influência sobre The White Stripes em Detroit",
+      "critic_score": 96,
+      "works": [
+        "House Rockin"
+      ]
+    },
+    {
+      "source": "Jon_Spencer_Blues_Explosion",
+      "target": "Steve_Albini",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Produção e engenharia em Memphis",
+      "critic_score": 92,
+      "works": [
+        "Acme"
+      ]
+    },
+    {
+      "source": "Thee_Headcoats",
+      "target": "Billy_Childish",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Banda prolífica de Billy Childish",
+      "critic_score": 93,
+      "works": [
+        "Heavens to Murgatroyd"
+      ]
+    },
+    {
+      "source": "Elliott_Smith",
+      "target": "Jon_Brion",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Produção de Figure 8",
+      "critic_score": 97,
+      "works": [
+        "Figure 8"
+      ]
+    },
+    {
+      "source": "Palace_Music",
+      "target": "Steve_Albini",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Produção de Viva Last Days of Openness",
+      "critic_score": 95,
+      "works": [
+        "Viva Last Days"
+      ]
+    },
+    {
+      "source": "Songs_Ohia",
+      "target": "Steve_Albini",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Produção de The Magnolia Electric Co.",
+      "critic_score": 98,
+      "works": [
+        "The Magnolia Electric Co."
+      ]
+    },
+    {
+      "source": "Red_House_Painters",
+      "target": "Mark_Kozelek",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Fundador e vocalista",
+      "critic_score": 94,
+      "works": [
+        "Down Colorful Hill"
+      ]
+    },
+    {
+      "source": "Mercury_Rev",
+      "target": "Dave_Fridmann",
+      "weight_count": 4,
+      "relation_type": "member",
+      "relation_desc": "Dave Fridmann era baixista e produtor",
+      "critic_score": 98,
+      "works": [
+        "Deserter's Songs"
+      ]
+    },
+    {
+      "source": "Spacemen_3",
+      "target": "Spiritualized",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Jason Pierce fundou Spiritualized após Spacemen 3",
+      "critic_score": 97,
+      "works": [
+        "Lazer Guided Melodies"
+      ]
+    },
+    {
+      "source": "Spiritualized",
+      "target": "Alan_Moulder",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Mixagem e engenharia de Ladies and Gentlemen",
+      "critic_score": 99,
+      "works": [
+        "Ladies and Gentlemen We Are Floating in Space"
+      ]
+    },
+    {
+      "source": "Brian_Jonestown_Massacre",
+      "target": "The_Dandy_Warhols",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Rivalidade e colaborações na cena Neo-Psych dos 90",
+      "critic_score": 92,
+      "works": [
+        "DIG! Documentary"
+      ]
+    },
+    {
+      "source": "Robyn_Hitchcock",
+      "target": "The_Soft_Boys",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Vocalista e compositor principal",
+      "critic_score": 94,
+      "works": [
+        "Underwater Moonlight"
+      ]
+    },
+    {
+      "source": "Throbbing_Gristle",
+      "target": "Ministry",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Pioneiros da música Industrial",
+      "critic_score": 96,
+      "works": [
+        "Industrial Records Sessions"
+      ]
+    },
+    {
+      "source": "Einstürzende_Neubauten",
+      "target": "Steve_Albini",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Gravações e engenharia de som Noise/Industrial",
+      "critic_score": 95,
+      "works": [
+        "Berlin Noise Sessions"
+      ]
+    },
+    {
+      "source": "Cabaret_Voltaire",
+      "target": "New_Order",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Cena Post-Punk / Industrial synth",
+      "critic_score": 91,
+      "works": [
+        "Factory Records Live"
+      ]
+    },
+    {
+      "source": "Suicidal_Tendencies",
+      "target": "Rick_Rubin",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Produção e selo Def American",
+      "critic_score": 93,
+      "works": [
+        "Lights Camera Action"
+      ]
+    },
+    {
+      "source": "Unwound",
+      "target": "Steve_Albini",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Gravação de Post-Hardcore / Noise Rock",
+      "critic_score": 94,
+      "works": [
+        "Repetition"
+      ]
+    },
+    {
+      "source": "Drive_Like_Jehu",
+      "target": "Steve_Albini",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Engenharia de som e turnês de Noise Rock",
+      "critic_score": 95,
+      "works": [
+        "Yank Crime"
+      ]
+    },
+    {
+      "source": "Dead_Moon",
+      "target": "The_Gories",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Cena Garage Punk independente",
+      "critic_score": 92,
+      "works": [
+        "Sub Pop Singles Club"
+      ]
+    },
+    {
+      "source": "Flat_Duo_Jets",
+      "target": "The_Cramps",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Turnês de Psychobilly / Garage Rock",
+      "critic_score": 91,
+      "works": [
+        "Southern Garage Tour"
+      ]
+    },
+    {
+      "source": "The_Chesterfield_Kings",
+      "target": "The_Fuzztones",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Coletânea Greg Shaw / Bomp! Records",
+      "critic_score": 90,
+      "works": [
+        "Voxx Garage Sampler"
+      ]
+    },
+    {
+      "source": "Smog",
+      "target": "Steve_Albini",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Produção de álbuns no Electrical Audio",
+      "critic_score": 95,
+      "works": [
+        "Julius Caesar"
+      ]
+    },
+    {
+      "source": "Cat_Power",
+      "target": "Dave_Fridmann",
+      "weight_count": 2,
+      "relation_type": "producer",
+      "relation_desc": "Mixagem e produção de Indie Folk",
+      "critic_score": 94,
+      "works": [
+        "What Would Community Think"
+      ]
+    },
+    {
+      "source": "The_Rain_Parade",
+      "target": "Mazzy_Star",
+      "weight_count": 3,
+      "relation_type": "member",
+      "relation_desc": "David Roback fundou ambas as bandas da Paisley Underground",
+      "critic_score": 95,
+      "works": [
+        "Paisley Underground"
+      ]
+    },
+    {
+      "source": "Les_Claypool",
+      "target": "Tom_Waits",
+      "weight_count": 3,
+      "relation_type": "guest",
+      "relation_desc": "Baixo em álbuns clássicos de Tom Waits",
+      "critic_score": 96,
+      "works": [
+        "Mule Variations"
+      ]
+    },
+    {
+      "source": "Sparklehorse",
+      "target": "PJ_Harvey",
+      "weight_count": 2,
+      "relation_type": "guest",
+      "relation_desc": "Vocais convidados em It's a Wonderful Life",
+      "critic_score": 95,
+      "works": [
+        "It's a Wonderful Life"
+      ]
+    },
+    {
+      "source": "Vic_Chesnutt",
+      "target": "Michael_Stipe",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_desc": "Descoberta e produção dos primeiros discos em Athens",
+      "critic_score": 94,
+      "works": [
+        "Little"
+      ]
+    },
+    {
+      "source": "Sparklehorse",
+      "target": "Tom_Waits",
+      "weight_count": 2,
+      "relation_type": "guest",
+      "relation_desc": "Participação em It's a Wonderful Life",
+      "critic_score": 97,
+      "works": [
+        "It's a Wonderful Life"
+      ]
+    },
+    {
+      "source": "The_Strokes",
+      "target": "Nick_Valensi",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Guitarrista solo",
+      "critic_score": 98,
+      "works": [
+        "Is This It"
+      ]
+    },
+    {
+      "source": "The_Strokes",
+      "target": "Nikolai_Fraiture",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Baixista",
+      "critic_score": 97,
+      "works": [
+        "Is This It"
+      ]
+    },
+    {
+      "source": "The_Strokes",
+      "target": "Fabrizio_Moretti",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Baterista",
+      "critic_score": 97,
+      "works": [
+        "Is This It"
+      ]
+    },
+    {
+      "source": "Julian_Casablancas",
+      "target": "Queens_of_the_Stone_Age",
+      "weight_count": 2,
+      "relation_type": "guest",
+      "relation_desc": "Participação no álbum Era Vulgaris",
+      "critic_score": 93,
+      "works": [
+        "Sick Sick Sick"
+      ]
+    },
+    {
+      "source": "The_White_Stripes",
+      "target": "Meg_White",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Baterista do duo The White Stripes",
+      "critic_score": 98,
+      "works": [
+        "Elephant"
+      ]
+    },
+    {
+      "source": "The_Strokes",
+      "target": "The_White_Stripes",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Pioneiros da revolução Garage Rock Revival de 2001",
+      "critic_score": 97,
+      "works": [
+        "2001 NYC/Detroit Revival"
+      ]
+    },
+    {
+      "source": "The_Hives",
+      "target": "Howlin_Pelle_Almqvist",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Vocalista performático",
+      "critic_score": 95,
+      "works": [
+        "Veni Vidi Vicious"
+      ]
+    },
+    {
+      "source": "The_Hives",
+      "target": "The_Strokes",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Turnês conjuntas do Garage Rock Revival",
+      "critic_score": 94,
+      "works": [
+        "US Tour 2002"
+      ]
+    },
+    {
+      "source": "The_Libertines",
+      "target": "Pete_Doherty",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Vocalista e compositor",
+      "critic_score": 96,
+      "works": [
+        "Up the Bracket"
+      ]
+    },
+    {
+      "source": "The_Libertines",
+      "target": "Carl_Barât",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Guitarrista e co-vocalista",
+      "critic_score": 96,
+      "works": [
+        "Up the Bracket"
+      ]
+    },
+    {
+      "source": "The_Black_Keys",
+      "target": "Dan_Auerbach",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Vocalista e guitarrista",
+      "critic_score": 96,
+      "works": [
+        "Brothers"
+      ]
+    },
+    {
+      "source": "The_Black_Keys",
+      "target": "Danger_Mouse",
+      "weight_count": 4,
+      "relation_type": "producer",
+      "relation_desc": "Produção de Attack & Release e Brothers",
+      "critic_score": 98,
+      "works": [
+        "Brothers"
+      ]
+    },
+    {
+      "source": "Interpol",
+      "target": "Daniel_Kessler",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Guitarrista e fundador",
+      "critic_score": 97,
+      "works": [
+        "Turn On the Bright Lights"
+      ]
+    },
+    {
+      "source": "Interpol",
+      "target": "Sam_Fogarino",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Baterista",
+      "critic_score": 96,
+      "works": [
+        "Antics"
+      ]
+    },
+    {
+      "source": "Interpol",
+      "target": "Carlos_D",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Baixista icônico",
+      "critic_score": 97,
+      "works": [
+        "Turn On the Bright Lights"
+      ]
+    },
+    {
+      "source": "Peter_Katis",
+      "target": "Interpol",
+      "weight_count": 4,
+      "relation_type": "producer",
+      "relation_desc": "Produção e engenharia de Turn On the Bright Lights",
+      "critic_score": 99,
+      "works": [
+        "Turn On the Bright Lights"
+      ]
+    },
+    {
+      "source": "Peter_Katis",
+      "target": "The_National",
+      "weight_count": 4,
+      "relation_type": "producer",
+      "relation_desc": "Produção de All Gator e Boxer",
+      "critic_score": 98,
+      "works": [
+        "Boxer"
+      ]
+    },
+    {
+      "source": "Yeah_Yeah_Yeahs",
+      "target": "Brian_Chase",
+      "weight_count": 5,
+      "relation_type": "member",
+      "relation_desc": "Baterista",
+      "critic_score": 96,
+      "works": [
+        "Show Your Bones"
+      ]
+    },
+    {
+      "source": "Franz_Ferdinand",
+      "target": "Alex_Turner",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Cena Post-Punk Revival britânica dos anos 2000",
+      "critic_score": 92,
+      "works": [
+        "NME Awards Live"
+      ]
+    },
+    {
+      "source": "Editors",
+      "target": "Interpol",
+      "weight_count": 2,
+      "relation_type": "collaboration",
+      "relation_desc": "Parceria de turnê e influências cruzadas de Post-Punk",
+      "critic_score": 91,
+      "works": [
+        "European Tour"
+      ]
+    },
+    {
+      "source": "The_Vines",
+      "target": "The_Strokes",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Trinômio 'The' do Garage Rock Revival (Strokes, Hives, Vines)",
+      "critic_score": 95,
+      "works": [
+        "Highly Evolved Tour 2002"
+      ]
+    },
+    {
+      "source": "Kings_of_Leon",
+      "target": "The_Strokes",
+      "weight_count": 3,
+      "relation_type": "collaboration",
+      "relation_desc": "Turnês de abertura e cena Garage Rock/Southern Revival",
+      "critic_score": 93,
+      "works": [
+        "US Revival Tour 2003"
+      ]
+    },
+    {
+      "source": "Gordon_Raphael",
+      "target": "Regina_Spektor",
+      "weight_count": 3,
+      "relation_type": "producer",
+      "relation_label": "produtor",
+      "relation_desc": "Produção dos álbuns seminais Soviet Kitsch e 11:11 no estúdio Trans-Siberian",
+      "critic_score": 94,
+      "works": [
+        "Soviet Kitsch",
+        "11:11"
+      ]
+    },
+    {
+      "source": "Julian_Casablancas",
+      "target": "Regina_Spektor",
+      "weight_count": 2,
+      "relation_type": "guest",
+      "relation_label": "colaboração",
+      "relation_desc": "Dueto vocal na faixa Modern Girls & Old Fashioned Men",
+      "critic_score": 92,
+      "works": [
+        "Modern Girls & Old Fashioned Men"
       ]
     }
   ]

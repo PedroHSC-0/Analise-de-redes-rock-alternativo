@@ -1,0 +1,26 @@
+# Arquivo do Artigo e compilação LaTeX
+docs/artigo_ieee.tex
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.synctex.gz
+docs/*.pdf
+
+# Ambientes Python e Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Ambientes Virtuais
+venv/
+.venv/
+env/
+
+# IDEs e Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
